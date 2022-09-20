@@ -228,6 +228,6 @@ background: linear-gradient(90deg, rgba(90,172,78,1) 0%, rgba(37,211,102,1) 35%,
         </a>
         @if(Session::has('success'))
         <script>
-            swal("Thank You !!","{{Session::get('success')}}","success",{button:"OK"});
+            swal("!! Thank You !!","{{Session::get('success')}}","success",{button:"OK"});
           </script>
           @endif

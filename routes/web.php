@@ -36,6 +36,7 @@ Route::get('/gallery',[FrontendController::class,'gallery'])->name('gallery');
 Route::get('/about',[FrontendController::class,'about'])->name('about');
 Route::get('/doctors',[FrontendController::class,'doctors'])->name('doctors');
 Route::get('/contact',[FrontendController::class,'contact'])->name('contact');
+Route::post('/contact_us',[ContactController::class,'store'])->name('contact_us');
 Route::get('/service',[FrontendController::class,'service'])->name('service');
 Route::post('/subscribe',[SubscribeUsController::class,'store'])->name('subscribe');
 

@@ -14,7 +14,7 @@ class EnquiryController extends Controller
      */
     public function index()
     {
-        $list=Enquiry::where('delete_status',0)->where('subject',)->get();
+        $list=Enquiry::where('delete_status',0)->get();
         return view('backend.Enquiry.index',compact('list'));
     }
 
@@ -83,6 +83,6 @@ class EnquiryController extends Controller
     {
         $enquiry->delete_status=1;
         $enquiry->save();
-        return redirect()->route('enquiries.index')->with('success','website deleted sucessfully');
+        return redirect()->route('enquiries.index')->with('success','Details deleted sucessfully');
     }
 }

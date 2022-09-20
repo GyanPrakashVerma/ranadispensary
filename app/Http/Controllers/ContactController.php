@@ -14,6 +14,6 @@ $contact->contact=$request->contact;
 $contact->subject=$request->subject;
 $contact->message=$request->msg;
 $contact->save();
-return redirect()->route('home')->with('success','Your Message reached Us');
+return redirect()->route('home')->with('success','We Reach You soon!');
    }
 }
