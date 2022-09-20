@@ -7,7 +7,7 @@
                         <div class="single-footer-caption mb-50">
                             <!-- logo -->
                             <div class="footer-logo mb-25">
-                                <a href="{{route('home')}}"><img src="{{asset('frontend/assets/img/logo/logo.png')}}" style="height:90px;width:250px" alt=""></a>
+                                <a href="{{route('home')}}"><img src="{{asset('setting_img/'.$setting->logo)}}" style="height:90px;width:250px" alt=""></a>
                             </div>
                             <d iv class="header-area">
                                 <div class="main-header main-header2">
@@ -29,10 +29,26 @@
                             </d>
                             <!-- social -->
                             <div class="footer-social mt-50">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                @if ($setting->twitter_link != '')
+                                <a href="{{$setting->twitter_link}}"><i class="fab fa-twitter"></i></a>
+                                @endif
+                                @if ($setting->insta_link != '')
+                                <a href="{{$setting->insta_link}}"><i class="fa-brands fa-instagram"></i></a>
+                                @endif
+                                @if ($setting->facebook_link != '')
+                                <a href="{{$setting->facebook_link}}"><i class="fab fa-facebook-f"></i></a>
+                                @endif
+                                @if ($setting->pinterest_link != '')
+                                <a href="{{$setting->pinterest_link}}"><i class="fab fa-pinterest-p"></i></a>
+                                @endif
+                                @if ($setting->google_link != '')
+                                <a href="{{$setting->google_link}}"><i class="fa-brands fa-google-plus"></i></a>
+                                @endif
+                                @if ($setting->linkedin_link != '')
+                                <a href="{{$setting->linkedin_link}}"> <i class="fa-brands fa-linkedin"></i></a>
+                                @endif
                             </div>
+                            
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">

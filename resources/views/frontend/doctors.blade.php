@@ -13,11 +13,10 @@
             </div>
         </div>
         <!-- / End Header Section -->
-        <div class="row">
+        <div class="row" style="margin:auto">
             @foreach ($ourteam as $item)
-                
             <!-- Start Single Person -->
-            <div class="col-sm-6 col-lg-3 col-xl-3">
+            <div class="col-sm-6 col-lg-3 col-xl-3 m-auto">
                 <div class="single-person">
                     <div class="person-image">
                         <img src="{{asset('images/'.$item->images)}}" alt="">

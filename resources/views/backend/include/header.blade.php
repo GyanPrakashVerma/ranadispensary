@@ -63,7 +63,7 @@
     background: #2196f3;
 }
 </style>
-<body class="sidebar-mini fixed bgstyle">
+<body class="sidebar-mini fixed bgstyle" >
    
       <!-- Navbar-->
       <header class="main-header-top hidden-print" href="#top" style="background-color: #ffffffba;">
@@ -109,8 +109,6 @@
                      </ul>
                   </li>
                </ul>
-
-              
                <!-- search end -->
             </div>
          </nav>

@@ -70,7 +70,7 @@
 	margin-top: 30px;
 	padding: 30px;
 	background-color: #f6f9ff;
-	border-radius: 5px;
+	border-radius: 0 0 0 35px;
 }
 
 .section-team .single-person:hover {
@@ -160,7 +160,7 @@ background: linear-gradient(90deg, rgba(90,172,78,1) 0%, rgba(37,211,102,1) 35%,
                         <!-- Logo -->
                         <div class="col-xl-2 col-lg-2 col-md-1">
                             <div class="logo">
-                                <a href="{{route('home')}}"><img src="{{asset('frontend/assets/img/logo/logo.png')}}" style="height:90px;width:250px" alt=""></a>
+                                <a href="{{route('home')}}"><img src="{{asset('setting_img/'.$setting->logo)}}" style="height:90px;width:250px" alt=""></a>
                             </div>
                         </div>
                         <div class="col-xl-10 col-lg-10 col-md-10">
@@ -211,7 +211,7 @@ background: linear-gradient(90deg, rgba(90,172,78,1) 0%, rgba(37,211,102,1) 35%,
 	color:#FFF;
 	border-radius:50px;
 	text-align:center;
-  font-size:30px;
+    font-size:30px;
 	box-shadow: 2px 2px 3px #999;
   z-index:100;
 }

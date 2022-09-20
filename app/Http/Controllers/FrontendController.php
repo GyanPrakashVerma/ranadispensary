@@ -16,25 +16,22 @@ class FrontendController extends Controller
     }
     public function home(){
         // $team=Ourteam::where('delete_status',0)->get();
-        // $dir=Ceo::where('delete_status',0)->get();
         // $feedback=Feedback::where('delete_status',0)->get();
-        // $plot=Plotmodel::where('status',1)->get();
-        // $duplex=Contactsale::where('status',1)->get()->take(3);
-        // $setting = Setting::where('delete_status', 0) ->where('status', 1)->get()->take(3);
-        return view('frontend.index');
+        $setting = Setting::where('delete_status', 0) ->where('status', 1)->first();
+        return view('frontend.index',compact('setting'));
     }
     public function about(){
         // $feedback=Feedback::where('delete_status',0)->get();
         // $image= Gallery::where('delete_status',0)->get();
-        // $setting = Setting::where('delete_status', 0) ->where('status', 1)->get();
-        return view('frontend.about');
+        $setting = Setting::where('delete_status', 0) ->where('status', 1)->first();
+        return view('frontend.about',compact('setting'));
     }
 
     public function gallery(){
         // $feedback=Feedback::where('delete_status',0)->get();
         // $image= Gallery::where('delete_status',0)->get();
-        // $setting = Setting::where('delete_status', 0) ->where('status', 1)->get();
-        return view('frontend.gallery');
+        $setting = Setting::where('delete_status', 0) ->where('status', 1)->first();
+        return view('frontend.gallery',compact('setting'));
     }
     public function blogs(){
         $blog = Blog::where('status',1)->where('delete_status',0)->get();
@@ -49,19 +46,19 @@ class FrontendController extends Controller
     // }
     public function contact(){
         // $feedback=Feedback::where('delete_status',0)->get();
-        // $setting = Setting::where('delete_status', 0) ->where('status', 1)->get();
-        return view('frontend.contact');
+        $setting = Setting::where('delete_status', 0) ->where('status', 1)->first();
+        return view('frontend.contact',compact('setting'));
     }
    
     public function service(){
         // $feedback=Feedback::where('delete_status',0)->get();
-        // $setting = Setting::where('delete_status', 0) ->where('status', 1)->get();
-        return view('frontend.services');
+        $setting = Setting::where('delete_status', 0) ->where('status', 1)->first();
+        return view('frontend.services',compact('setting'));
     }
 
     public function doctors(){
         // $feedback=Feedback::where('delete_status',0)->get();
-        $setting = Setting::where('delete_status', 0)->where('status', 1)->get();
+        $setting = Setting::where('delete_status', 0)->where('status', 1)->first();
         $ourteam =Ourteam::where('delete_status', 0)->where('status', 1)->get();
         return view('frontend.doctors',compact('setting','ourteam'));
     }

@@ -26,8 +26,12 @@
          </div>
           <div class="form-group">
              <label for="image" class="form-control-label">Image</label>
-             <input type="file" name="image" class="form-control" id="image" >
+             <input type="file" name="image" class="form-control"  onchange="handle(event.target.value)">
+            
+             {{-- <img  id="image" height="150" width="150" alt=""> --}}
+           
              <img src="{{ asset('images/'. $ourteam->images) }}" height="150" width="150" alt="">
+         
           </div>
           <div class="row">
             <div class="col-md-6">
@@ -85,3 +89,10 @@
     </div>
  </div>
  @endsection
+ {{-- <script>
+    function handle(e){
+        // console.log(e);
+        var  image= e;
+ document.getElementById('image').src =image;
+    }
+ </script> --}}
