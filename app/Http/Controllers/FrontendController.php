@@ -18,8 +18,9 @@ class FrontendController extends Controller
     public function home(){
         // $team=Ourteam::where('delete_status',0)->get();
         // $feedback=Feedback::where('delete_status',0)->get();
+        $about = About::where('delete_status', 0) ->where('status', 1)->first();
         $setting = Setting::where('delete_status', 0) ->where('status', 1)->first();
-        return view('frontend.index',compact('setting'));
+        return view('frontend.index',compact('setting','about'));
     }
     public function about(){
         // $feedback=Feedback::where('delete_status',0)->get();
