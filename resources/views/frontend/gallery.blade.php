@@ -25,32 +25,13 @@
             <div class="section-top-border section-tittle">
                 <h2>Image Gallery</h2>
                 <div class="row gallery-item">
-                    <div class="col-md-4">
-                        <a href="{{asset('frontend/assets/img/elements/g1.jpg')}}" class="img-pop-up">
-                            <div class="single-gallery-image" style="background: url({{asset('frontend/assets/img/elements/g1.jpg')}});"></div>
+                    @foreach ($image as $item)    
+                    <div class="col-md-3 col-lg-3 col-xl-3 col-sm-2">
+                        <a href="{{asset('galleries/'.$item->images)}}" class="img-pop-up">
+                            <div class="single-gallery-image" style="background: url({{asset('galleries/'.$item->images)}});"></div>
                         </a>
                     </div>
-                    <div class="col-md-4">
-                        <a href="{{asset('frontend/assets/img/elements/g2.jpg')}}" class="img-pop-up">
-                            <div class="single-gallery-image" style="background: url({{asset('frontend/assets/img/elements/g2.jpg')}});"></div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="{{asset('frontend/assets/img/elements/g3.jpg')}}" class="img-pop-up">
-                            <div class="single-gallery-image" style="background: url({{asset('frontend/assets/img/elements/g3.jpg')}});"></div>
-                        </a>
-                    </div>
-                    <div class="col-md-6">
-                        <a href="{{asset('frontend/assets/img/elements/g4.jpg')}}" class="img-pop-up">
-                            <div class="single-gallery-image" style="background: url({{asset('frontend/assets/img/elements/g4.jpg')}});"></div>
-                        </a>
-                    </div>
-                    <div class="col-md-6">
-                        <a href="{{asset('frontend/assets/img/elements/g5.jpg')}}" class="img-pop-up">
-                            <div class="single-gallery-image" style="background: url({{asset('frontend/assets/img/elements/g5.jpg')}});"></div>
-                        </a>
-                    </div>
-                    
+                    @endforeach
                 </div>
             </div>
         </div>

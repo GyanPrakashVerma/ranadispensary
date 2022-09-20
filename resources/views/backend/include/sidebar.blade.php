@@ -35,6 +35,9 @@
             <li {{ Request::is('admin/ourteam') ? 'active' : '' }}><a class="waves-effect waves-dark"
                     href="{{ route('ourteam.index') }}"><i class="fa-solid fa-people-group"></i><span>
                         Our Team</span></a></li>
+                        <li {{ Request::is('/admin/about/1/edit') ? 'active' : '' }}><a class="waves-effect waves-dark"
+                            href="{{ '/admin/about/1/edit'}}"><i class="fa-solid fa-people-group"></i><span>
+                                About Us</span></a></li>
             <li {{ Request::is('admin/enquiries') ? 'active' : '' }}><a class="waves-effect waves-dark"
                     href="{{ route('enquiries.index') }}"><i class="fa-solid fa-calendar-check"></i><span>
                         Contacts</span></a></li>

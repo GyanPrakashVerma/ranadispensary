@@ -16,6 +16,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SubscribeUsController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\AboutController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -57,4 +58,5 @@ Route::group(['middleware' => ['adminpage'], 'prefix' =>'/admin'],function(){
     Route::resource('subscribe',SubscribeController::class);
     Route::resource('service',ServiceController::class);
     Route::resource('setting',SettingController::class);
+    Route::resource('about',AboutController::class);
 });

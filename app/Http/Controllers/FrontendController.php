@@ -6,6 +6,7 @@ use App\Models\Feedback;
 use App\Models\Gallery;
 use App\Models\Setting;
 use App\Models\Blog;
+use App\Models\About;
 
 use Illuminate\Http\Request;
 
@@ -24,14 +25,15 @@ class FrontendController extends Controller
         // $feedback=Feedback::where('delete_status',0)->get();
         // $image= Gallery::where('delete_status',0)->get();
         $setting = Setting::where('delete_status', 0) ->where('status', 1)->first();
-        return view('frontend.about',compact('setting'));
+        $about = About::where('delete_status', 0) ->where('status', 1)->first();
+        return view('frontend.about',compact('setting','about'));
     }
 
     public function gallery(){
         // $feedback=Feedback::where('delete_status',0)->get();
-        // $image= Gallery::where('delete_status',0)->get();
+        $image= Gallery::where('delete_status',0)->get();
         $setting = Setting::where('delete_status', 0) ->where('status', 1)->first();
-        return view('frontend.gallery',compact('setting'));
+        return view('frontend.gallery',compact('setting','image'));
     }
     public function blogs(){
         $blog = Blog::where('status',1)->where('delete_status',0)->get();

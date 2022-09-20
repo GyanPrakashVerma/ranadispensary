@@ -1,5 +1,6 @@
 @extends('frontend.layouts.main')
 @section('add_content')
+
     <main>
         <!--? Slider Area Start-->
         <div class="slider-area slider-area2">
@@ -22,80 +23,38 @@
         </div>
     </div>
     <!-- Slider Area End -->
-    <!--? Team Area Start-->
-    <section class="team-area pb-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-8">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <img src="{{asset('frontend/assets/img/gallery/team1.png')}}" alt="">
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="#">Your daily meal plan</a></h5>
-                            <p>Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi 
-                            sem ut ipsum.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-8">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <img src="{{asset('frontend/assets/img/gallery/team2.png')}}" alt="">
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="#">Muscle Gain</a></h5>
-                            <p>Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi 
-                            sem ut ipsum.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-8">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <img src="{{asset('frontend/assets/img/gallery/team3.png')}}" alt="">
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="#">Weight Loss</a></h5>
-                            <p>Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi 
-                            sem ut ipsum.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--? Team End-->
+    
     <!-- Services End-->
     <!--? About-2 Area Start -->
     <div class="about-area2 section-padding40">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-7 col-md-12">
+                <div class="col-lg-5 col-md-12">
                     <!-- about-img -->
                     <div class="about-img ">
-                        <img src="{{asset('frontend/assets/img/gallery/about.png')}}" alt="">
+                        <img src="{{asset('images/'.$about->image)}}" alt="">
                     </div>
                 </div>
-                <div class="col-lg-5 col-md-12">
+                <div class="col-lg-7 col-md-12">
                     <div class="about-caption mb-50">
                         <!-- Section Tittle -->
                         <div class="section-tittle mb-35">
-                            <h2>Create a healthy 
-                            life you love!</h2>
+                            <h2>{{$about->title}}</h2>
                         </div>
-                        <p class="pera-top mb-40">Almost before we knew it, we had left the ground</p>
-                        <p class="pera-bottom mb-30">Praesent porttitor, nulla vitae posuere iaculis, arcu nisl
-                            dignissim dolor, a pretium mi sem ut ipsum. Fusce
-                        fermentum. Pellentesque libero tortor, tincidunt et.</p>
+                        <p class="pera-top mb-40">{!!$about->short_desc!!}</p>
+                       
                         <div class="icon-about">
                          <img src="{{asset('frontend/assets/img/icon/about1.svg')}}" alt="" class=" mr-20">
-                         <img src="{{asset('frontend/assets/img/icon/about2')}}" alt="">
+                         <img src="{{asset('frontend/assets/img/icon/about2.svg')}}" alt="">
                      </div>
                  </div>
              </div>
          </div>
      </div>
+ </div>
+ <div class="container mt-40">
+    <p class="pera-top mb-40 text-center">{!!$about->long_desc!!}</p>
+
  </div>
  <!--? Testimonial Area Start -->
  <section class="testimonial-area testimonial-padding fix">
@@ -158,64 +117,7 @@
     </div>
 </div>
 <!-- video_end -->      
-<!--? Blog Area Start -->
-<section class="home-blog-area section-padding30">
-    <div class="container">
-        <!-- Section Tittle -->
-        <div class="row justify-content-center">
-            <div class="col-lg-7 col-md-9 col-sm-10">
-                <div class="section-tittle text-center mb-100">
-                    <h2>Latest Blog</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="home-blog-single mb-40">
-                    <div class="blog-img-cap">
-                        <div class="blog-img">
-                            <img src="{{asset('frontend/assets/img/gallery/blog1.png')}}" alt="">
-                        </div>
-                        <div class="blog-cap">
-                            <h3><a href="blog_details.html">Your daily meal plan</a></h3>
-                            <P>Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi 
-                            sem ut ipsum.</P>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="home-blog-single mb-40">
-                    <div class="blog-img-cap">
-                        <div class="blog-img">
-                            <img src="{{asset('frontend/assets/img/gallery/blog2.png')}}" alt="">
-                        </div>
-                        <div class="blog-cap">
-                            <h3><a href="blog_details.html">Food is a great source of  medicine</a></h3>
-                            <P>Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi 
-                            sem ut ipsum.</P>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="home-blog-single mb-40">
-                    <div class="blog-img-cap">
-                        <div class="blog-img">
-                            <img src="{{asset('frontend/assets/img/gallery/blog3.png')}}" alt="">
-                        </div>
-                        <div class="blog-cap">
-                            <h3><a href="blog_details.html">Everyday diet plan</a></h3>
-                            <P>Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi 
-                            sem ut ipsum.</P>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Blog Area End -->
+
 <!--? About Law Start-->
 <section class="about-low-area mt-30">
     <div class="container">
