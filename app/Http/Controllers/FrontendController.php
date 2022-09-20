@@ -53,6 +53,9 @@ class FrontendController extends Controller
     }
    
     public function service(){
+
+
+        
         // $feedback=Feedback::where('delete_status',0)->get();
         $setting = Setting::where('delete_status', 0) ->where('status', 1)->first();
         return view('frontend.services',compact('setting'));
