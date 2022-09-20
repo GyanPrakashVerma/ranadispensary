@@ -106,7 +106,7 @@ background: rgb(90,172,78);
     line-height: 60px;
     text-align: center;
 background: linear-gradient(90deg, rgba(90,172,78,1) 0%, rgba(37,211,102,1) 35%, rgba(90,172,78,1) 100%);
-    color: #fff;
+    color: rgb(90,172,78);
     border-radius: 50%;
     font-size: 24px;
 }
@@ -126,12 +126,16 @@ background: linear-gradient(90deg, rgba(90,172,78,1) 0%, rgba(37,211,102,1) 35%,
 .section-team .single-person .person-info .speciality {
     text-transform: uppercase;
     font-size: 14px;
+    text-align: center;
     color: rgb(90,172,78);
 }
 
 .section-team .single-person:hover .full-name,
 .section-team .single-person:hover .speciality {
 	color: #fff;
+}
+.section-team .single-person:hover .icon a {
+    color: rgb(90,172,78);
 }
 </style>
 <body>

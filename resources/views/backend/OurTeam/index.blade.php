@@ -8,12 +8,11 @@
         <div class="card-block">
             <div class="row">
                 <div class="col-sm-12 table-responsive">
-                    <table class="table table-hover">
+                    <table class="table table-hover table-striped">
                         <thead>
                             <tr>
                                 <th>#</th>
                                 <th>Name</th>
-                                <th>Email</th>
                                 <th>Contact</th>
                                 <th>Designation</th>
                                 <th>Images</th>
@@ -29,7 +28,7 @@
                                 <tr>
                                     <td>{{ $i++ }}</td>
                                     <td>{{ $ourteam->Name }}</td>
-                                    <td>{{ $ourteam->email }}</td>
+                                    {{-- <td>{{ $ourteam->email }}</td> --}}
                                     <td>{{ $ourteam->contact }}</td>
                                     <td>{{ $ourteam->designation }}</td>
                                     <td><img src="{{ asset('images/'. $ourteam->images) }}" height="150px" width="150px"

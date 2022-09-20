@@ -61,7 +61,8 @@ class FrontendController extends Controller
 
     public function doctors(){
         // $feedback=Feedback::where('delete_status',0)->get();
-        // $setting = Setting::where('delete_status', 0) ->where('status', 1)->get();
-        return view('frontend.doctors');
+        $setting = Setting::where('delete_status', 0)->where('status', 1)->get();
+        $ourteam =Ourteam::where('delete_status', 0)->where('status', 1)->get();
+        return view('frontend.doctors',compact('setting','ourteam'));
     }
 }

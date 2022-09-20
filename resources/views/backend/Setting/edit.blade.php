@@ -2,7 +2,7 @@
 @section('new_content')
 <div class="card">
     <div class="card-header">
-        <h5 class="card-header-text">Setting</h5>
+        <h5 class="card-header-text">Website   Setting</h5>
     </div>
     <div class="card-block">
         <form action="{{route('setting.update',$setting->id)}}" method="POST" enctype="multipart/form-data">

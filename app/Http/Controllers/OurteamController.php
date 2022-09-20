@@ -38,7 +38,7 @@ class OurteamController extends Controller
     {
         $ourteam = new Ourteam;
         $ourteam->Name=$request->fname;
-        $ourteam->email=$request->email;
+        // $ourteam->email=$request->email;
         $ourteam->contact=$request->phone;
         $ourteam->designation=$request->designation;
         if($request->image!=null){
@@ -88,7 +88,7 @@ class OurteamController extends Controller
     public function update(Request $request, Ourteam $ourteam)
     {
         $ourteam->Name=$request->fname;
-        $ourteam->email=$request->email;
+        // $ourteam->email=$request->email;
         $ourteam->contact=$request->phone;
         $ourteam->designation=$request->designation;
         if($request->image!=null){

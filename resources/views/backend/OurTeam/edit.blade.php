@@ -12,10 +12,10 @@
              <label for="title" class="form-control-label">Name</label>
              <input type="text" name="fname" class="form-control" id="title" value="{{$ourteam->Name}}">
           </div>
-          <div class="form-group">
+          {{-- <div class="form-group">
             <label for="title" class="form-control-label">Email</label>
             <input type="email" name="email" class="form-control" id="title" value="{{$ourteam->email}}">
-         </div>
+         </div> --}}
          <div class="form-group">
             <label for="title" class="form-control-label">Contact</label>
             <input type="text" name="phone" class="form-control" id="title" value="{{$ourteam->contact}}">
