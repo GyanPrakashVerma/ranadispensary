@@ -17,6 +17,7 @@ use App\Http\Controllers\SubscribeUsController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ConsultController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -60,4 +61,5 @@ Route::group(['middleware' => ['adminpage'], 'prefix' =>'/admin'],function(){
     Route::resource('service',ServiceController::class);
     Route::resource('setting',SettingController::class);
     Route::resource('about',AboutController::class);
+    Route::post('/consulting',[ConsultController::class,'store'])->name('cnst_Store');
 });
