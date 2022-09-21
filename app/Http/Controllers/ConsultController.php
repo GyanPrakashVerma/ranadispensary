@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class ConsultController extends Controller
 {
+    public function index(){
+        $list= Consult::where('delete_status',0)->get()->paginate(10);
+        return view('backend.consults.index',compact('list'));
+    }
     public function store(Request $request)
     {
 
@@ -71,5 +75,15 @@ class ConsultController extends Controller
         $consult->message=$request->message;
         $consult->save();
         return back()->with('success', 'Successfully  recieved your message!');
+    }
+    public function show($id){
+        $list= Consult::find($id);
+        return view('backend.consults.show',compact('list'));
+    }
+
+    public function delete($id){
+      $data = Consult :: find($id);
+      $data->delete();
+      return redirect()->back()->with('success','Data Deleted successfully');
     }
 }

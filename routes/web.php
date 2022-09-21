@@ -40,6 +40,8 @@ Route::get('/contact',[FrontendController::class,'contact'])->name('contact');
 Route::post('/contact_us',[ContactController::class,'store'])->name('contact_us');
 Route::get('/service',[FrontendController::class,'service'])->name('service');
 Route::post('/subscribe',[SubscribeUsController::class,'store'])->name('subscribe');
+Route::post('/consulting',[ConsultController::class,'store'])->name('cnst_Store');
+
 
 
 // Backend routes
@@ -61,5 +63,7 @@ Route::group(['middleware' => ['adminpage'], 'prefix' =>'/admin'],function(){
     Route::resource('service',ServiceController::class);
     Route::resource('setting',SettingController::class);
     Route::resource('about',AboutController::class);
-    Route::post('/consulting',[ConsultController::class,'store'])->name('cnst_Store');
+    Route::get('/consulting/list',[ConsultController::class,'index'])->name('cnst_list');
+    Route::get('/consulting/list/show/{id}',[ConsultController::class,'show'])->name('cnst_show');
+    Route::get('/consulting/list/delete/{id}',[ConsultController::class,'delete'])->name('cnst_delete');
 });

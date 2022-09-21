@@ -56,7 +56,7 @@
             <li {{ Request::is('admin/gallery') ? 'active' : '' }}><a class="waves-effect waves-dark"
                     href="{{ route('gallery.index') }}"><i class="fa-solid fa-camera"></i><span>
                         Gallery</span></a></li>
-            <li {{ Request::is('admin/gallery') ? 'active' : '' }}><a class="waves-effect waves-dark" href="#"><i class="fa-solid fa-stethoscope"></i><span>
+            <li {{ Request::is('admin/consulting/list') ? 'active' : '' }}><a class="waves-effect waves-dark" href="{{route('cnst_list')}}"><i class="fa-solid fa-stethoscope"></i><span>
                         Consultant</span></a></li>
             <li {{ Request::is('admin/setting/1/edit') ? 'active' : '' }}><a class="waves-effect waves-dark"
                     href="{{ '/admin/setting/1/edit' }}"><i class="fa-solid fa-screwdriver-wrench"></i><span>
