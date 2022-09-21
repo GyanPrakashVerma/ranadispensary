@@ -39,7 +39,7 @@
                     <div class="about-caption mb-50">
                         <!-- Section Tittle -->
                         <div class="section-tittle mb-35">
-                            <h2>{{$about->title}}</h2>
+                            {{-- <h2>{{$about->title}}</h2> --}}
                         </div>
                         <p class="pera-top mb-40">{!!$about->short_desc!!}</p>
                        

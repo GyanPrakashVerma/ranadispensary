@@ -13,7 +13,9 @@ use Illuminate\Http\Request;
 class FrontendController extends Controller
 {
     public function comming(){
-        return view('frontend.index');
+        $about = About::where('delete_status', 0) ->where('status', 1)->first();
+        $setting = Setting::where('delete_status', 0) ->where('status', 1)->first();
+        return view('frontend.index',compact('setting','about'));
     }
     public function home(){
         // $team=Ourteam::where('delete_status',0)->get();

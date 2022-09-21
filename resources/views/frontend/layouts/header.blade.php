@@ -43,6 +43,9 @@
     p{
         hyphens: auto;
     }
+    .section_bg {
+                background-color: #e9f9e7;
+            }
     p,a,h1,h2,h3,h4 {
 	margin: 0;
 	padding: 0;
