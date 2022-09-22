@@ -3,7 +3,7 @@
 <div class="card" style="overflow:scroll">
     <div class="card-header">
         <h5 class="card-header-text">Settings</h5>
-        <button class="btn btn-outline-warning" style="float:right"><a href="{{ route('setting.create') }}" class="text-dark"> Add changes</a></button>
+        <a href="{{ route('setting.create') }}" class="text-dark"><button class="btn btn-outline-warning" style="float:right">Add changes</button></a>
     </div>
     <div class="card-block">
         <div class="row">

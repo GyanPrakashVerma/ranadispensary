@@ -14,7 +14,7 @@ class SubscribeController extends Controller
      */
     public function index()
     {
-        $user=Subscribe::where('delete_status',0)->get();
+        $user=Subscribe::where('delete_status',0)->orderBy('id','asc')->paginate(10);
         return view('backend.SubscribeUS.index',compact('user'));
     }
 

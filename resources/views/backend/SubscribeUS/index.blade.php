@@ -41,7 +41,17 @@
                                 </tr>
                             @endforeach
                         </tbody>
+                        <tfoot>
+                            <div class="paginate">
+                                {{ $user->links() }}
+                            </div>
+                        </tfoot>
                     </table>
+                    <tfoot>
+                        <div class="paginate">
+                            {{ $user->links() }}
+                        </div>
+                    </tfoot>
                 </div>
             </div>
         </div>

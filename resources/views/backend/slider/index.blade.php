@@ -3,8 +3,8 @@
     <div class="card" style="overflow:scroll">
         <div class="card-header">
             <h5 class="card-header-text">Slider</h5>
-            <button class="btn btn-outline-warning" style="float:right"><a href="{{ route('slider.create') }}"
-                    class="text-dark">Add Slider Image</a></button>
+            <a href="{{ route('slider.create') }}"
+            class="text-dark"> <button class="btn btn-outline-warning" style="float:right">Add Slider Image</button></a>
         </div>
         <div class="card-block">
             <div class="row">

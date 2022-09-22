@@ -15,7 +15,7 @@ class GalleryController extends Controller
     public function index()
     {
     
-        $image= Gallery::where('delete_status',0)->get();
+        $image= Gallery::where('delete_status',0)->orderBy('id','asc')->paginate(10);
         return view('backend.Gallery.index',compact('image'));
     }
 

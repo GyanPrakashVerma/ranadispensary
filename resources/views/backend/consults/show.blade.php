@@ -2,12 +2,12 @@
 @section('new_content')
 <div class="card" style="overflow:scroll">
     <div class="card-header">
-        
+        <h5 class="card-header-text">Consultants Full Detail Bellow - </h5>
     </div>
     <div class="card-block">
         <h4 class="card-header-text">    </h4>
         <div class="row">
-            <div class="col-sm-12 table-responsive">
+            <div class="col-sm-10 col-md-10  table-responsive" style="margin: auto;">
                 <table class="table table-striped bordered   text-center">
                     <tr>
                     <th>Name  :  </th>

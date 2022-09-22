@@ -15,7 +15,7 @@
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Contact</th>
-                                <th>Action</th>
+                                <th>Activity</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -39,7 +39,17 @@
                                 </tr>
                             @endforeach 
                         </tbody>
+                        <tfoot>
+                            <div class="paginate">
+                                {{ $list->links() }}
+                            </div>
+                        </tfoot>
                     </table>
+                    <tfoot>
+                        <div class="paginate">
+                            {{ $list->links() }}
+                        </div>
+                    </tfoot>
                 </div>
             </div>
         </div>

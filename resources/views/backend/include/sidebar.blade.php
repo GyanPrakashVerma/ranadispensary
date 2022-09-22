@@ -10,8 +10,14 @@
         background-color: #2196f3;
         color: #fff;
     }
+    .main-sidebar .sidebar{
+        min-height:fit-content!important;
+    }
+    aside{
+        height: 0px!important;
+    }
 </style>
-<aside class="main-sidebar hidden-print">
+<aside class="main-sidebar hidden-print" >
     <section class="sidebar" id="sidebar-scroll">
         <!-- Sidebar Menu-->
         <ul class="sidebar-menu">

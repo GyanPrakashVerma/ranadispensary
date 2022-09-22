@@ -8,8 +8,8 @@
     <div class="card" style="overflow:scroll">
         <div class="card-header">
             <h5 class="card-header-text">About Us</h5>
-            <button class="btn btn-outline-warning" style="float:right"><a href="{{ route('about.create') }}"
-                    class="text-dark">Add Details</a></button>
+            <a href="{{ route('about.create') }}"
+                    class="text-dark"><button class="btn btn-outline-warning" style="float:right">Add Details</button></a>
         </div>
         <div class="card-block">
             <div class="row">

@@ -3,8 +3,7 @@
     <div class="card" style="overflow:scroll">
         <div class="card-header">
             <h5 class="card-header-text">Our Gallery</h5>
-            <button class="btn btn-outline-warning" style="float:right"><a href="{{ route('gallery.create') }}"
-                    class="text-dark">AddImages</a></button>
+            <a href="{{ route('gallery.create') }}" class="text-dark"><button class="btn btn-outline-warning" style="float:right">Add Images</button></a>
         </div>
         <div class="card-block">
             <div class="row">
@@ -54,27 +53,20 @@
                                 </tr>
                             @endforeach
                         </tbody>
+                        <tfoot>
+                            <div class="paginate">
+                                {{ $image->links() }}
+                            </div>
+                        </tfoot>
                     </table>
+                    <tfoot>
+                        <div class="paginate">
+                            {{ $image->links() }}
+                        </div>
+                    </tfoot>
                 </div>
             </div>
         </div>
     </div>
 @endsection
-{{-- <script>
-    $(function() { 
-            $('.toggle-class').change(function() { 
-            var status = $(this).prop('checked') == true ? 1 : 0;  
-            var product_id = $(this).data('id');  
-            $.ajax({ 
-     
-                type: "GET", 
-                dataType: "json", 
-                url: '/status/update', 
-                data: {'status': status, 'product_id': product_id}, 
-                success: function(data){ 
-                console.log(data.success) 
-             } 
-          }); 
-       }) 
-    }); 
- </script> --}}
+

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Paginate;
 use App\Models\Ourteam;
 use Illuminate\Http\Request;
 
@@ -14,7 +14,7 @@ class OurteamController extends Controller
      */
     public function index()
     {
-        $team=Ourteam::where('delete_status',0)->get();
+        $team=Ourteam::where('delete_status',0)->orderBy('id','desc')->paginate(5);
         return view('backend.OurTeam.index',compact('team'));
     }
 

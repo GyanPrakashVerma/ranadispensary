@@ -15,7 +15,7 @@ class FeedbackController extends Controller
     public function index()
     {
          
-        $feedback=Feedback::where('delete_status',0)->get();
+        $feedback=Feedback::where('delete_status',0)->orderBy('id','asc')->paginate(10);
         return view('backend.Feedbacks.index',compact('feedback'));
     }
 

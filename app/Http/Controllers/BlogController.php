@@ -8,7 +8,7 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $blog = Blog::where('status',1)->where('delete_status',0)->get();
+        $blog = Blog::where('status',1)->where('delete_status',0)->orderBy('id','desc')->paginate(10);
         return view('backend.Blogs.index', compact('blog'));
     }
     public function create()

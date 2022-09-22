@@ -1,9 +1,15 @@
 @extends('layouts.new_app')
 @section('new_content')
+<style>
+    .paginate{
+        float:right;      
+    }
+</style>
     <div class="card" style="overflow:scroll">
         <div class="card-header">
             <h5 class="card-header-text">Our Team</h5>
-            <button class="btn btn-outline-warning" style="float:right"><a href="{{ route('ourteam.create') }}" class="text-dark">Add Member</a></button>
+            <a href="{{ route('ourteam.create') }}" class="text-dark"> <button class="btn btn-outline-warning"
+                    style="float:right">Add Member</button></a>
         </div>
         <div class="card-block">
             <div class="row">
@@ -31,24 +37,43 @@
                                     {{-- <td>{{ $ourteam->email }}</td> --}}
                                     <td>{{ $ourteam->contact }}</td>
                                     <td>{{ $ourteam->designation }}</td>
-                                    <td><img src="{{ asset('images/'. $ourteam->images) }}" height="150px" width="150px"
+                                    <td><img src="{{ asset('images/' . $ourteam->images) }}" height="150px" width="150px"
                                             alt=""></td>
-                                            <td>@if($ourteam->status==1)
-          <span class="right badge badge-warning "> Active</span>
-            @else <span class="right badge badge-info ">In Active</span>  @endif</td>
-          <td>
-          <form action="{{route('ourteam.destroy',$ourteam->id)}}" method="POST">
-                @csrf
-                @method('Delete')
-                <a href="{{route('ourteam.edit',$ourteam->id)}}" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
-                <button type="submit" class="btn btn-dark"><i class="fa-solid fa-trash-can"></i></button>
-            </form>
-            
-          </td>
+                                    <td>
+                                        @if ($ourteam->status == 1)
+                                            <span class="right badge badge-warning "> Active</span>
+                                        @else
+                                            <span class="right badge badge-info ">In Active</span>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        <form action="{{ route('ourteam.destroy', $ourteam->id) }}" method="POST">
+                                            @csrf
+                                            @method('Delete')
+                                            <a href="{{ route('ourteam.edit', $ourteam->id) }}" class="btn btn-success"><i
+                                                    class="fa-solid fa-pen-to-square"></i></a>
+                                            <button type="submit" class="btn btn-dark"><i
+                                                    class="fa-solid fa-trash-can"></i></button>
+                                        </form>
+
+                                    </td>
                                 </tr>
-                            @endforeach 
+                            @endforeach
+
+
+                            
                         </tbody>
+                        <tfoot>
+                            <div class="paginate">
+                                {{ $team->links() }}
+                            </div>
+                        </tfoot>
                     </table>
+                    <tfoot>
+                        <div class="paginate">
+                            {{ $team->links() }}
+                        </div>
+                    </tfoot>
                 </div>
             </div>
         </div>

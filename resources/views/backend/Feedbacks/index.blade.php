@@ -3,8 +3,8 @@
     <div class="card" style="overflow:scroll">
         <div class="card-header">
             <h5 class="card-header-text">All Feedbacks</h5>
-            <button class="btn btn-outline-warning" style="float:right"><a href="{{ route('feedback.create') }}"
-                    class="text-dark">Add Feedback</a></button>
+            <a href="{{ route('feedback.create') }}"
+                    class="text-dark"><button class="btn btn-outline-warning" style="float:right">Add Feedback</button></a>
         </div>
         <div class="card-block">
             <div class="row">
@@ -57,7 +57,17 @@
                                 </tr>
                             @endforeach
                         </tbody>
+                        <tfoot>
+                            <div class="paginate">
+                                {{ $feedback->links() }}
+                            </div>
+                        </tfoot>
                     </table>
+                    <tfoot>
+                        <div class="paginate">
+                            {{ $feedback->links() }}
+                        </div>
+                    </tfoot>
                 </div>
             </div>
         </div>
