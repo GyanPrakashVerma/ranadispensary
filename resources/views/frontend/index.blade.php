@@ -2,7 +2,7 @@
 @section('add_content')
     <main>
         <!--? Slider Area Start-->
-        <div class="slider-area">
+        <div class="slider-area" style="background:url('{{asset('Banner/'.$banner->banner)}}');background-repeat:no-repeat">
             <div class="slider-active dot-style">
                 <!-- Slider Single -->
                 <div class="single-slider d-flex align-items-center slider-height">
@@ -22,7 +22,7 @@
                                         </h1>
                                         <p data-animation="fadeInUp" data-delay=".6s">Almost before we knew it, we<br> had
                                             left the ground</p>
-                                        <a href="services.html" class="btn" data-animation="fadeInLeft"
+                                        <a href="#" class="btn" data-animation="fadeInLeft"
                                             data-delay=".3s">Take a Service</a>
                                     </div>
                                 </div>
@@ -99,7 +99,7 @@
                             </div>
                         </div>
                         <div class="col-xl-2 col-lg-3 col-md-4">
-                            <a href="services.html" class="btn f-right sm-left">Take a Service</a>
+                            <a href="{{route('service')}}" class="btn f-right sm-left">Take a Service</a>
                         </div>
                     </div>
                 </div>
@@ -115,10 +115,10 @@
                                 <img src="{{ asset('frontend/assets/img/icon/services1.svg') }}" alt="">
                             </div>
                             <div class="cat-cap">
-                                <h5><a href="services.html">Physical Activity</a></h5>
+                                <h5><a href="#">Physical Activity</a></h5>
                                 <p>Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi
                                     sem ut ipsum.</p>
-                                <a href="services.html" class="plus-btn"><i class="ti-plus"></i></a>
+                                <a href="#" class="plus-btn"><i class="ti-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -128,10 +128,10 @@
                                 <img src="{{ asset('frontend/assets/img/icon/services2.svg') }}" alt="">
                             </div>
                             <div class="cat-cap">
-                                <h5><a href="services.html">Physical Activity</a></h5>
+                                <h5><a href="#">Physical Activity</a></h5>
                                 <p>Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi
                                     sem ut ipsum.</p>
-                                <a href="services.html" class="plus-btn"><i class="ti-plus"></i></a>
+                                <a href="#" class="plus-btn"><i class="ti-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -141,10 +141,10 @@
                                 <img src="{{ asset('frontend/assets/img/icon/services3.svg') }}" alt="">
                             </div>
                             <div class="cat-cap">
-                                <h5><a href="services.html">Physical Activity</a></h5>
+                                <h5><a href="#">Physical Activity</a></h5>
                                 <p>Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi
                                     sem ut ipsum.</p>
-                                <a href="services.html" class="plus-btn"><i class="ti-plus"></i></a>
+                                <a href="#" class="plus-btn"><i class="ti-plus"></i></a>
                             </div>
                         </div>
                     </div>

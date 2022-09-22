@@ -49,9 +49,9 @@
                             <img src="{{asset('frontend/assets/img/icon/services1.svg ')}}" alt="">
                         </div>
                         <div class="cat-cap">
-                            <h5><a href="services.html">Physical Activity</a></h5>
+                            <h5><a href="#">Physical Activity</a></h5>
                             <p>Praesent porttitor, nulla vitae  posuere iaculis, arcu nisl dignissim dolor, a pretium mi  sem ut ipsum.</p>
-                            <a href="services.html" class="plus-btn"><i class="ti-plus"></i></a>
+                            <a href="#" class="plus-btn"><i class="ti-plus"></i></a>
                         </div>
                     </div>
                 </div>
@@ -61,9 +61,10 @@
                             <img src="{{asset('frontend/assets/img/icon/services2.svg ')}}" alt="">
                         </div>
                         <div class="cat-cap">
-                            <h5><a href="services.html">Physical Activity</a></h5>
+                            <h5><a href="#">Physical Activity</a></h5>
                             <p>Praesent porttitor, nulla vitae  posuere iaculis, arcu nisl dignissim dolor, a pretium mi  sem ut ipsum.</p>
-                            <a href="services.html" class="plus-btn"><i class="ti-plus"></i></a>
+                            <a href="#" class="plus-btn"><i class="ti-plus"></i></a>
+                            
                         </div>
                     </div>
                 </div>
@@ -73,9 +74,9 @@
                             <img src="{{asset('frontend/assets/img/icon/services3.svg ')}}" alt="">
                         </div>
                         <div class="cat-cap">
-                            <h5><a href="services.html">Physical Activity</a></h5>
+                            <h5><a href="#">Physical Activity</a></h5>
                             <p>Praesent porttitor, nulla vitae  posuere iaculis, arcu nisl dignissim dolor, a pretium mi  sem ut ipsum.</p>
-                            <a href="services.html" class="plus-btn"><i class="ti-plus"></i></a>
+                            <a href="#" class="plus-btn"><i class="ti-plus"></i></a>
                         </div>
                     </div>
                 </div>

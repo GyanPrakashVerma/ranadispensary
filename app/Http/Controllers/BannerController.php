@@ -14,7 +14,7 @@ class BannerController extends Controller
      */
     public function index()
     {
-        $banner= Banner :: where('status',1)->orderBy('id','asc')->paginate(10);
+        $banner= Banner :: where('status',1)->first();
         return view('backend.banner.index',compact('banner'));
     }
 
