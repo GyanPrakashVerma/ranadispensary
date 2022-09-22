@@ -63,6 +63,9 @@
     font-weight: 600;
     background: #2196f3;
 }
+.paginate{
+        float:right;      
+    }
 </style>
 <body class="sidebar-mini fixed bgstyle" >
    

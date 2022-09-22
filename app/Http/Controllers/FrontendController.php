@@ -70,4 +70,9 @@ class FrontendController extends Controller
         $ourteam =Ourteam::where('delete_status', 0)->where('status', 1)->get();
         return view('frontend.doctors',compact('setting','ourteam'));
     }
+
+    public function faq(){
+        $setting = Setting::where('delete_status', 0)->where('status', 1)->first();
+        return view('frontend.faq',compact('setting'));
+    }
 }

@@ -1,9 +1,7 @@
 @extends('layouts.new_app')
 @section('new_content')
 <style>
-    .paginate{
-        float:right;      
-    }
+   
 </style>
     <div class="card" style="overflow:scroll">
         <div class="card-header">

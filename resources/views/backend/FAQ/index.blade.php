@@ -2,9 +2,9 @@
 @section('new_content')
     <div class="card" style="overflow:scroll">
         <div class="card-header">
-            <h5 class="card-header-text">Banner</h5>
-            <a href="{{ route('banner.create') }}"
-                    class="text-dark"><button class="btn btn-outline-warning" style="float:right">Add Banner Image</button></a>
+            <h5 class="card-header-text">FAQs</h5>
+            <a href="{{ route('faq.create') }}"
+                    class="text-dark"><button class="btn btn-outline-warning" style="float:right">Add FAQ</button></a>
         </div>
         <div class="card-block">
             <div class="row">
@@ -13,8 +13,9 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Images</th>
-                                <th>Status</th>
+                                <th>Title</th>
+                                <th>Short Answer</th>
+                                {{-- <th>Short Answer</th> --}}
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -22,40 +23,33 @@
                             @php
                                 $i = 1;
                             @endphp
-                            @foreach ($banner as $images)
+                            @foreach ($faq as $faqs)
                                 <tr class="justify-content-center text-align-center align-items">
                                     <td>{{ $i++ }}</td>
-                                    <td><img src="{{ asset('Banner/' . $images->banner) }}" height="150px" width="350px"
-                                            alt=""></td>
+                                    <td>{{$faqs->question}}</td>
                                    
 
+                                    <td>{{$faqs->short_ans}}  </td>
                                     <td>
-                                        @if ($images->status == 1)
-                                            <span class="right badge badge-warning "> Active</span>
-                                        @else
-                                            <span class="right badge badge-info ">In Active</span>
-                                        @endif
-                                    </td>
-                                    <td>
-                                      
-                                            <a href="{{ route('banner.edit', $images->id) }}" class="btn btn-success"><i
+                                        <form action="{{ route('faq.destroy', $faqs->id) }}" method="POST">
+                                            @csrf
+                                            @method('Delete')
+                                            <a href="{{ route('faq.edit', $faqs->id) }}" class="btn btn-success"><i
                                                     class="fa-solid fa-pen-to-square"></i></a>
 
-                                            
+                                            <button type="submit" class="btn btn-dark"><i
+                                                    class="fa-solid fa-trash-can"></i></button>
+                                        </form>
 
                                     </td>
                                 </tr>
                             @endforeach
                         </tbody>
-                        <tfoot>
-                            <div class="paginate">
-                                {{ $banner->links() }}
-                            </div>
-                        </tfoot>
+                       
                     </table>
                     <tfoot>
                         <div class="paginate">
-                            {{ $banner->links() }}
+                            {{ $faq->links() }}
                         </div>
                     </tfoot>
                 </div>

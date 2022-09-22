@@ -68,6 +68,10 @@
                     href="{{ '/admin/setting/1/edit' }}"><i class="fa-solid fa-screwdriver-wrench"></i><span>
                         Settings </span> </a>
             </li>
+            <li {{ Request::is('admin/faq/') ? 'active' : '' }}><a class="waves-effect waves-dark"
+                href="{{ route('faq.index') }}"><i class="fa-solid fa-book"></i><span>
+                    FAQ </span> </a>
+        </li>
 
         </ul>
     </section>

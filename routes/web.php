@@ -18,6 +18,7 @@ use App\Http\Controllers\BannerController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ConsultController;
+use App\Http\Controllers\FaqController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,6 +36,7 @@ Route::get('/home',[FrontendController::class,'home'])->name('home');
 // Route::get('/blogs',[FrontendController::class,'blogs'])->name('blogs');
 Route::get('/gallery',[FrontendController::class,'gallery'])->name('gallery');
 Route::get('/about',[FrontendController::class,'about'])->name('about');
+Route::get('/faq',[FrontendController::class,'faq'])->name('faq');
 Route::get('/doctors',[FrontendController::class,'doctors'])->name('doctors');
 Route::get('/contact',[FrontendController::class,'contact'])->name('contact');
 Route::post('/contact_us',[ContactController::class,'store'])->name('contact_us');
@@ -63,6 +65,7 @@ Route::group(['middleware' => ['adminpage'], 'prefix' =>'/admin'],function(){
     Route::resource('service',ServiceController::class);
     Route::resource('setting',SettingController::class);
     Route::resource('about',AboutController::class);
+    Route::resource('faq',FaqController::class);
     Route::get('/consulting/list',[ConsultController::class,'index'])->name('cnst_list');
     Route::get('/consulting/list/show/{id}',[ConsultController::class,'show'])->name('cnst_show');
     Route::get('/consulting/list/delete/{id}',[ConsultController::class,'delete'])->name('cnst_delete');
