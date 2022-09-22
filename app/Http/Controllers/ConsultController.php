@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class ConsultController extends Controller
 {
     public function index(){
-        $list= Consult::where('delete_status',0)->get()->paginate(10);
+        $list= Consult::where('delete_status',0)->get();
         return view('backend.consults.index',compact('list'));
     }
     public function store(Request $request)

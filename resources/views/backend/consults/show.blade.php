@@ -62,14 +62,14 @@
                     <td><div class="col ">
 
                         <div class="form-check form-check-inline">
-                            <input required class="form-check-input" type="radio" name="gender"
+                            <input required class="form-check-input" type="radio" name="foodtype"
                                 id="inlineRadio1" value="Veg" @if ($list->foodtype == "Veg")
                                   checked 
                                 @endif >
                             <label class="form-check-label" for="inlineRadio1">Veg</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input required class="form-check-input" type="radio" name="gender"
+                            <input required class="form-check-input" type="radio" name="foodtype"
                                 id="inlineRadio1" value="Non Veg" @if ($list->foodtype == "Non Veg")
                                 checked 
                               @endif >
@@ -84,18 +84,18 @@
                     <td><div class="col ">
 
                         <div class="form-check form-check-inline">
-                            <input required class="form-check-input" type="radio" name="gender"
-                                id="inlineRadio1" value="Yes" @if ($list->appetite == "Yes")
+                            <input required class="form-check-input" type="radio" name="appetite"
+                                id="inlineRadio1" value="Yes" @if ($list->appetite == "Good")
                                 checked 
                               @endif >
-                            <label class="form-check-label" for="inlineRadio1">Yes</label>
+                            <label class="form-check-label" for="inlineRadio1">Good</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input required class="form-check-input" type="radio" name="gender"
-                                id="inlineRadio1" value="No" @if ($list->appetite == "No")
+                            <input required class="form-check-input" type="radio" name="appetite"
+                                id="inlineRadio1" value="No" @if ($list->appetite == "Bad")
                                 checked 
                               @endif>
-                            <label class="form-check-label" for="inlineRadio1">No</label>
+                            <label class="form-check-label" for="inlineRadio1">Bad</label>
                         </div>
 
                     </div></td>
@@ -106,21 +106,22 @@
                     <td><div class="col ">
 
                         <div class="form-check form-check-inline">
-                            <input required class="form-check-input" type="radio" name="gender"
-                                id="inlineRadio1" value="Yes" @if ($list->physique == "Yes")
+                            <input required class="form-check-input" type="radio" name="physique"
+                                id="inlineRadio1" value="Yes" @if ($list->physique == "Fat")
                                 checked 
                               @endif>
-                            <label class="form-check-label" for="inlineRadio1">Yes</label>
+                            <label class="form-check-label" for="inlineRadio1">Fat</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input required class="form-check-input" type="radio" name="gender"
-                                id="inlineRadio1" value="No"  @if ($list->physique == "No")
+                            <input required class="form-check-input" type="radio" name="physique"
+                                id="inlineRadio1" value="No"  @if ($list->physique == "Slim")
                                 checked 
                               @endif>
-                            <label class="form-check-label" for="inlineRadio1">No</label>
+                            <label class="form-check-label" for="inlineRadio1">Slim</label>
                         </div>
 
-                    </div></td>
+                    </div>
+                </td>
 
                 </tr>
                 <tr>
@@ -128,14 +129,14 @@
                     <td> <div class="col ">
 
                         <div class="form-check form-check-inline">
-                            <input required class="form-check-input" type="radio" name="gender"
+                            <input required class="form-check-input" type="radio" name="constipation"
                                 id="inlineRadio1" value="Yes"  @if ($list->constipation == "Yes")
                                 checked 
                               @endif>
                             <label class="form-check-label" for="inlineRadio1">Yes</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input required class="form-check-input" type="radio" name="gender"
+                            <input required class="form-check-input" type="radio" name="constipation"
                                 id="inlineRadio1" value="No" @if ($list->constipation == "No")
                                 checked 
                               @endif>
@@ -150,14 +151,14 @@
                     <td><div class="col ">
 
                         <div class="form-check form-check-inline">
-                            <input required class="form-check-input" type="radio" name="gender"
+                            <input required class="form-check-input" type="radio" name="sleeplessness"
                                 id="inlineRadio1" value="Yes" @if ($list->sleeplessness == "Yes")
                                 checked 
                               @endif>
                             <label class="form-check-label" for="inlineRadio1">Yes</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input required class="form-check-input" type="radio" name="gender"
+                            <input required class="form-check-input" type="radio" name="sleeplessness"
                                 id="inlineRadio1" value="No" @if ($list->sleeplessness == "No")
                                 checked 
                               @endif>
@@ -172,14 +173,14 @@
                     <td><div class="col ">
 
                         <div class="form-check form-check-inline">
-                            <input required class="form-check-input" type="radio" name="gender"
+                            <input required class="form-check-input" type="radio" name="hypertension"
                                 id="inlineRadio1" value="Yes" @if ($list->hypertension == "Yes")
                                 checked 
                               @endif>
                             <label class="form-check-label" for="inlineRadio1">Yes</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input required class="form-check-input" type="radio" name="gender"
+                            <input required class="form-check-input" type="radio" name="hypertension"
                                 id="inlineRadio1" value="No" @if ($list->hypertension == "No")
                                 checked 
                               @endif>
@@ -194,14 +195,14 @@
                     <td><div class="col ">
 
                         <div class="form-check form-check-inline">
-                            <input required class="form-check-input" type="radio" name="gender"
+                            <input required class="form-check-input" type="radio" name="diabetic"
                                 id="inlineRadio1" value="Yes" @if ($list->diabetic == "Yes")
                                 checked 
                               @endif>
                             <label class="form-check-label" for="inlineRadio1">Yes</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input required class="form-check-input" type="radio" name="gender"
+                            <input required class="form-check-input" type="radio" name="diabetic"
                                 id="inlineRadio1" value="No"  @if ($list->diabetic == "No")
                                 checked 
                               @endif>
@@ -216,14 +217,14 @@
                     <td><div class="col ">
 
                         <div class="form-check form-check-inline">
-                            <input required class="form-check-input" type="radio" name="gender"
+                            <input required class="form-check-input" type="radio" name="ex_urination"
                                 id="inlineRadio1" value="Yes"  @if ($list->ex_urination == "Yes")
                                 checked 
                               @endif>
                             <label class="form-check-label" for="inlineRadio1">Yes</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input required class="form-check-input" type="radio" name="gender"
+                            <input required class="form-check-input" type="radio" name="ex_urination"
                                 id="inlineRadio1" value="No" @if ($list->ex_urination == "No")
                                 checked 
                               @endif>
@@ -238,14 +239,14 @@
                     <td><div class="col ">
 
                         <div class="form-check form-check-inline">
-                            <input required class="form-check-input" type="radio" name="gender"
+                            <input required class="form-check-input" type="radio" name="noc_emission"
                                 id="inlineRadio1" value="Yes" @if ($list->noc_emission == "Yes")
                                 checked 
                               @endif>
                             <label class="form-check-label" for="inlineRadio1">Yes</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input required class="form-check-input" type="radio" name="gender"
+                            <input required class="form-check-input" type="radio" name="noc_emission"
                                 id="inlineRadio1" value="No" @if ($list->noc_emission == "No")
                                 checked 
                               @endif>
@@ -260,14 +261,14 @@
                     <td><div class="col ">
 
                         <div class="form-check form-check-inline">
-                            <input required class="form-check-input" type="radio" name="gender"
+                            <input required class="form-check-input" type="radio" name="premature_ejaculation"
                                 id="inlineRadio1" value="Yes" @if ($list->premature_ejaculation == "Yes")
                                 checked 
                               @endif>
                             <label class="form-check-label" for="inlineRadio1">Yes</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input required class="form-check-input" type="radio" name="gender"
+                            <input required class="form-check-input" type="radio" name="premature_ejaculation"
                                 id="inlineRadio1" value="No" @if ($list->premature_ejaculation == "No")
                                 checked 
                               @endif>
@@ -282,14 +283,14 @@
                     <td><div class="col ">
 
                         <div class="form-check form-check-inline">
-                            <input required class="form-check-input" type="radio" name="gender"
+                            <input required class="form-check-input" type="radio" name="s_weakness"
                                 id="inlineRadio1" value="Yes" @if ($list->s_weakness == "Yes")
                                 checked 
                               @endif>
                             <label class="form-check-label" for="inlineRadio1">Yes</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input required class="form-check-input" type="radio" name="gender"
+                            <input required class="form-check-input" type="radio" name="s_weakness"
                                 id="inlineRadio1" value="No" @if ($list->s_weakness == "No")
                                 checked 
                               @endif>
@@ -304,14 +305,14 @@
                     <td><div class="col ">
 
                         <div class="form-check form-check-inline">
-                            <input required class="form-check-input" type="radio" name="gender"
+                            <input required class="form-check-input" type="radio" name="v_diseases"
                                 id="inlineRadio1" value="Yes" @if ($list->v_diseases == "Yes")
                                 checked 
                               @endif>
                             <label class="form-check-label" for="inlineRadio1">Yes</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input required class="form-check-input" type="radio" name="gender"
+                            <input required class="form-check-input" type="radio" name="v_diseases"
                                 id="inlineRadio1" value="No" @if ($list->v_diseases == "No")
                                 checked 
                               @endif>
@@ -326,14 +327,14 @@
                     <td><div class="col ">
 
                         <div class="form-check form-check-inline">
-                            <input required class="form-check-input" type="radio" name="gender"
+                            <input required class="form-check-input" type="radio" name="intoxicant"
                                 id="inlineRadio1" value="Yes" @if ($list->intoxicant == "Yes")
                                 checked 
                               @endif>
                             <label class="form-check-label" for="inlineRadio1">Yes</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input required class="form-check-input" type="radio" name="gender"
+                            <input required class="form-check-input" type="radio" name="intoxicant"
                                 id="inlineRadio1" value="No"  @if ($list->intoxicant == "No")
                                 checked 
                               @endif>
@@ -344,8 +345,8 @@
 
                 </tr>
                 <tr>
-                    <th>Message :</th>
-                    <td>{{$list->message}}</td>
+                    <th>Customer Message :</th>
+                    <td><textarea name="message" class="form-control" id="" cols="30" rows="10" readonly> {{$list->message}}</textarea> </td>
                 </tr>
 
                 </table>
