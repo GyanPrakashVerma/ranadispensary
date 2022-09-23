@@ -39,47 +39,24 @@
             </div>
         </div>
     </section>
-    <!--? Services Area Start -->
-    <div class="service-area">
+      <!--? Services Area Start -->
+      <div class="service-area">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6">
+                @foreach($service as $services)
+                <div class="col-lg-4 col-md-6 col-sm-6" >
                     <div class="single-cat text-center mb-50">
                         <div class="cat-icon">
-                            <img src="{{asset('frontend/assets/img/icon/services1.svg ')}}" alt="">
+                            <img src="{{ asset('images/'.$services->images) }}" style="height:100px;width:100px;" alt="">
                         </div>
                         <div class="cat-cap">
-                            <h5><a href="#">Physical Activity</a></h5>
-                            <p>Praesent porttitor, nulla vitae  posuere iaculis, arcu nisl dignissim dolor, a pretium mi  sem ut ipsum.</p>
-                            <a href="#" class="plus-btn"><i class="ti-plus"></i></a>
+                            <h5><a href="{{route('service_detail',$services->id)}}">{{$services->title}}</a></h5>
+                            <p>{{$services->short_description}}</p>
+                            <a href="{{route('service_detail',$services->id)}}" class="plus-btn pb-1" style="text-decoration:underline!important;">Read More..</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-cat text-center mb-50">
-                        <div class="cat-icon">
-                            <img src="{{asset('frontend/assets/img/icon/services2.svg ')}}" alt="">
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="#">Physical Activity</a></h5>
-                            <p>Praesent porttitor, nulla vitae  posuere iaculis, arcu nisl dignissim dolor, a pretium mi  sem ut ipsum.</p>
-                            <a href="#" class="plus-btn"><i class="ti-plus"></i></a>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-cat text-center mb-50">
-                        <div class="cat-icon">
-                            <img src="{{asset('frontend/assets/img/icon/services3.svg ')}}" alt="">
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="#">Physical Activity</a></h5>
-                            <p>Praesent porttitor, nulla vitae  posuere iaculis, arcu nisl dignissim dolor, a pretium mi  sem ut ipsum.</p>
-                            <a href="#" class="plus-btn"><i class="ti-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

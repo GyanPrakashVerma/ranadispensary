@@ -16,7 +16,7 @@
                             <div class="col-xl-7 col-lg-8 col-md-10 ">
                                 <div class="hero-wrapper">
                                     <div class="hero__caption">
-                                        <h1 data-animation="fadeInUp" data-delay=".3s">Service Details</h1>
+                                        <h1 data-animation="fadeInUp" data-delay=".3s">FAQ Details</h1>
                                         <p data-animation="fadeInUp" data-delay=".6s">Almost before we knew it, we<br> had
                                             left the ground</p>
                                     </div>
@@ -38,9 +38,9 @@
                                 <img class="img-fluid" src="assets/img/blog/single_blog_1.png" alt="">
                             </div> --}}
                             <div class="blog_details">
-                                <h2 style="color: #2d2d2d;">{{$ser->title}}</h2>
+                                <h2 style="color: #2d2d2d;">{{$faq->question}}</h2>
                                 <p class="excert">
-                                   {!!$ser->description!!}
+                                   {!!$faq->long_ans!!}
                                 </p>
                             </div>
                         </div>

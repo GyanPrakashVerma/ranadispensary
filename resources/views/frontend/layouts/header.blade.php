@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html lang="zxx">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="{{asset('frontend/assets/css/slick.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/nice-select.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/style.css')}}">
+
+    
     <!--Start of Tawk.to Script-->
    <script src="https://kit.fontawesome.com/ba24b37900.js" crossorigin="anonymous"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" ></script>
@@ -45,6 +47,7 @@
     }
     .section_bg {
                 background-color: #e9f9e7;
+                border-radius: 0 0 40px;
             }
     p,a,h1,h2,h3,h4 {
 	margin: 0;

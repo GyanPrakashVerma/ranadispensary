@@ -2,32 +2,15 @@
     <div class="footer-wrappr section-bg3" data-background="{{ asset('frontend/assets/img/gallery/footer-bg.png') }}">
         <div class="footer-area footer-padding ">
             <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-xl-8 col-lg-8 col-md-6 col-sm-12">
+                <div class="row justify-content-between text-center">
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                         <div class="single-footer-caption mb-50">
                             <!-- logo -->
                             <div class="footer-logo mb-25">
                                 <a href="{{ route('home') }}"><img src="{{ asset('setting_img/' . $setting->logo) }}"
                                         style="height:90px;width:250px" alt=""></a>
                             </div>
-                            <d iv class="header-area">
-                                <div class="main-header main-header2">
-                                    <div class="menu-main d-flex align-items-center justify-content-start">
-                                        <!-- Main-menu -->
-                                        <div class="main-menu main-menu2">
-                                            <nav>
-                                                <ul>
-                                                    <li><a href="{{ route('home') }}">Home</a></li>
-                                                    <li><a href="{{ route('about') }}">About</a></li>
-                                                    <li><a href="{{ route('service') }}">Services</a></li>
-                                                    <li><a href="{{ route('doctors') }}">Doctors</a></li>
-                                                    <li><a href="{{ route('contact') }}">Contact</a></li>
-                                                </ul>
-                                            </nav>
-                                        </div>
-                                    </div>
-                                </div>
-                            </d>
+                          
                             <!-- social -->
                             <div class="footer-social mt-50">
                                 @if ($setting->twitter_link != '')
@@ -54,7 +37,58 @@
 
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-tittle mb-50">
+                            <h4>Quick Links</h4>
+                        </div>
+                        <d iv class="header-area">
+                            <div class="main-header main-header2">
+                                <div class="menu-main  align-items-center">
+                                    <!-- Main-menu -->
+                                    <div class="main-menu main-menu2">
+                                        <nav>
+                                            <ul>
+                                                <li><a href="{{ route('home') }}" style="padding: 8px 11px!important;">Home</a></li><br>
+                                                <li><a href="{{ route('about') }}">About</a></li><br>
+                                                <li><a href="{{ route('service') }}">Services</a></li><br>
+                                                <li><a href="{{ route('doctors') }}">Doctors</a></li><br>
+                                                <li><a href="{{ route('contact') }}">Contact</a></li><br>
+                                                <li><a href="{{ route('faq') }}">FAQ</a></li><br>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </d>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-tittle mb-50">
+                            <h4>Contact Us</h4>
+                        </div>
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-home"></i></span>
+                            <div class="media-body">
+                                <h3>{{$setting->address}}</h3>
+                               
+                            </div>
+                        </div>
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+                            <div class="media-body">
+                                <h3><a href="tel:{{$setting->contact_no}}">(+91):{{$setting->contact_no}}</a></h3>
+                                {{-- <p>Mon to Sat :{{$setting->b_hour}}</p>
+                                <p>Sun :{{$setting->b_hour_s}}</p> --}}
+                            </div>
+                        </div>
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-email"></i></span>
+                            <div class="media-body">
+                                <h3><a href="mailTO:{{$setting->email}}">{{$setting->email}}</a></h3>
+                                <p>Send us your query anytime!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                         <div class="single-footer-caption">
                             <div class="footer-tittle mb-50">
                                 <h4>Subscribe newsletter</h4>

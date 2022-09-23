@@ -82,7 +82,7 @@
     </div>
     <!-- Slider Area End -->
      {{-- faq area start --}}
-    <section class="home-blog-area section-padding30 section_bg mt-4">
+    <section class="home-blog-area section-padding30 section_bg mt-4" >
 
         <div class="container">
             <div class="row justify-content-center text-center">
@@ -95,48 +95,565 @@
             </div>
             <div class="row">
                 <div class="col-md-10 col-sm-10 col-lg-10 m-auto">
-                    <div id="accordion" class="accordion">
-                        <div class="card mb-0">
-                            <div class="card-header collapsed" data-toggle="collapse" href="#collapseOne">
-                                <a class="card-title">
-                                    Item 1
-                                </a>
-                            </div>
-                            <div id="collapseOne" class="card-body collapse" data-parent="#accordion" >
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
-                                    aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
-                                    craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </p>
-                            </div>
-                            <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                                <a class="card-title">
-                                  Item 2
-                                </a>
-                            </div>
-                            <div id="collapseTwo" class="card-body collapse" data-parent="#accordion" >
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
-                                    aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
-                                    craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </p>
-                            </div>
-                            <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                                <a class="card-title">
-                                  Item 3
-                                </a>
-                            </div>
-                            <div id="collapseThree" class="collapse" data-parent="#accordion" >
-                                <div class="card-body"><p> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
-                                    aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. samus labore sustainable VHS.</p>
+                    @php
+                        $i=0;
+                    @endphp
+                    @foreach ($faq as $faqs)
+                        @php
+                            $i++;
+                        @endphp
+                        <div id="accordion" class="accordion">
+                            <div class="card mb-0">
+                                <div class="card-header collapsed" role="tab" id="@php echo 'heading'.$i @endphp" data-toggle="collapse" href="@php echo '#collapse'.$i @endphp">
+                                    <a class="card-title text-dark" data-toggle="collapse" href="@php echo '#collapse'.$i @endphp" aria-expanded="true" aria-controls="@php echo 'collapse'.$i @endphp">
+                                      <img src="{{asset('frontend/assets/img/ic1.jpg')}}" alt=""> {{$faqs->question}}
+                                    </a>
                                 </div>
+                                <div id="@php echo 'collapse'.$i @endphp" role="tabpanel"  aria-labelledby="@php echo 'heading'.$i @endphp" class="card-body collapse" data-parent="#accordion" >
+                                    <p>{{$faqs->short_ans}} </p>
+
+                                    <a href="{{route('faq_detail',$faqs->id)}}"><button class="btn" style="padding:10px!important;">Read More</button></a>
+                                </div>
+                                
                             </div>
                         </div>
-                    </div>
+                    @endforeach
+                    
                 </div>
             </div>
             
         </div>
     </section>
+    <section class="home-blog-area section-padding30 section_bg mt-4">
+
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="header-section section-tittle">
+                        <h3 class="small-title">Please give reply to all question if not...! You cannot send e-mail</h3>
+                        <h2>ONLINE CONSULTING</h2>
+                    </div>
+                </div>
+            </div>
             
+            <form action="{{route('cnst_Store')}}" method="POST">
+                @csrf
+                <div class="row mt-5">
+                    <div class="col-sm-6">
+                        <div class="form-group m-2">
+                            <input required type="text"
+                                style="background-color: #e9f9e7;border-color: #72E48E;height:35px; height:35px"
+                                class="form-control text-dark" placeholder="Name" name="name" >
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group m-2">
+                            <input required type="number" style="background-color: #e9f9e7;border-color: #72E48E;height:35px;"
+                                class="form-control text-dark" placeholder="Age" name="age" >
+                        </div>
+                    </div>
+                    <div class="col-sm-6" style="border-color: #72E48E;">
+
+                        <div class="m-2">
+
+                            <div
+                                style="border-style: solid;background-color: #e9f9e7;border-color: #72E48E;height:35px;border-width: 1px;padding: 7px;border-radius: 5px;">
+
+                                <div class="row">
+                                    <div class="col">
+                                        Gender
+                                    </div>
+                                    <div class="col ">
+
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="gender"
+                                                id="inlineRadio1" value="Male" >
+                                            <label class="form-check-label" for="inlineRadio1">Male</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="gender"
+                                                id="inlineRadio1" value="Female" >
+                                            <label class="form-check-label" for="inlineRadio1">Female</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6" style="border-color: #72E48E;">
+
+                        <div class="m-2">
+
+                            <div
+                                style="border-style: solid;background-color: #e9f9e7;border-color: #72E48E;height:35px;border-width: 1px;padding: 7px;border-radius: 5px;">
+
+                                <div class="row">
+                                    <div class="col">
+                                        Marital Status
+                                    </div>
+                                    <div class="col ">
+
+
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="mstatus"
+                                                id="inlineRadio1" value="Married">
+                                            <label class="form-check-label" for="inlineRadio1">Married</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="mstatus"
+                                                id="inlineRadio1" value="Un Married">
+                                            <label class="form-check-label" for="inlineRadio1">Un Married</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group m-2">
+                            <input required type="number" style="background-color: #e9f9e7;border-color: #72E48E;height:35px;"
+                                class="form-control text-dark" placeholder="Phone" name="phone">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group m-2">
+                            <input required type="email" style="background-color: #e9f9e7;border-color: #72E48E;height:35px;"
+                                class="form-control text-dark" placeholder="Email" name="email">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group m-2">
+                            <input required type="number" style="background-color: #e9f9e7;border-color: #72E48E;height:35px;"
+                                class="form-control text-dark" placeholder="Weight" name="weight">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group m-2">
+                            <input required type="number" style="background-color: #e9f9e7;border-color: #72E48E;height:35px;"
+                                class="form-control text-dark" placeholder="Height" name="height">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group m-2">
+                            <input required type="text" style="background-color: #e9f9e7;border-color: #72E48E;height:35px;"
+                                class="form-control text-dark" placeholder="City" name="city">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group m-2">
+                            <input required type="text" style="background-color: #e9f9e7;border-color: #72E48E;height:35px;"
+                                class="form-control text-dark" placeholder="Country" name="country">
+                        </div>
+                    </div>
+                    <div class="col-sm-6" style="border-color: #72E48E;">
+
+                        <div class="m-2">
+
+                            <div
+                                style="border-style: solid;background-color: #e9f9e7;border-color: #72E48E;height:35px;border-width: 1px;padding: 7px;border-radius: 5px;">
+
+                                <div class="row">
+                                    <div class="col">
+                                        Type of food that you eat
+                                    </div>
+                                    <div class="col ">
+
+
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="foodtype"
+                                                id="inlineRadio1" value="Veg">
+                                            <label class="form-check-label" for="inlineRadio1">Veg</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="foodtype"
+                                                id="inlineRadio1" value="Non Veg ">
+                                            <label class="form-check-label" for="inlineRadio1">Non Veg </label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6" style="border-color: #72E48E;">
+
+                        <div class="m-2">
+
+                            <div
+                                style="border-style: solid;background-color: #e9f9e7;border-color: #72E48E;height:35px;border-width: 1px;padding: 7px;border-radius: 5px;">
+
+                                <div class="row">
+                                    <div class="col">
+                                        How is your appetite?
+                                    </div>
+                                    <div class="col ">
+
+
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="appetite"
+                                                id="inlineRadio1" value="Good">
+                                            <label class="form-check-label" for="inlineRadio1">Good</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="appetite"
+                                                id="inlineRadio1" value="Bad">
+                                            <label class="form-check-label" for="inlineRadio1">Bad</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6" style="border-color: #72E48E;">
+
+                        <div class="m-2">
+
+                            <div
+                                style="border-style: solid;background-color: #e9f9e7;border-color: #72E48E;height:35px;border-width: 1px;padding: 7px;border-radius: 5px;">
+
+                                <div class="row">
+                                    <div class="col">
+                                        How is your physique?
+                                    </div>
+                                    <div class="col ">
+
+
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="physique"
+                                                id="inlineRadio1" value="Fat">
+                                            <label class="form-check-label" for="inlineRadio1">Fat</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="physique"
+                                                id="inlineRadio1" value="Slim">
+                                            <label class="form-check-label" for="inlineRadio1">Slim</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6" style="border-color: #72E48E;">
+
+                        <div class="m-2">
+
+                            <div
+                                style="border-style: solid;background-color: #e9f9e7;border-color: #72E48E;height:35px;border-width: 1px;padding: 7px;border-radius: 5px;">
+
+                                <div class="row">
+                                    <div class="col">
+                                        Do you have constipation?
+                                    </div>
+                                    <div class="col ">
+
+
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="constipation"
+                                                id="inlineRadio1" value="Yes">
+                                            <label class="form-check-label" for="inlineRadio1">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="constipation"
+                                                id="inlineRadio1" value="No">
+                                            <label class="form-check-label" for="inlineRadio1">No</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6" style="border-color: #72E48E;">
+
+                        <div class="m-2">
+
+                            <div
+                                style="border-style: solid;background-color: #e9f9e7;border-color: #72E48E;height:35px;border-width: 1px;padding: 7px;border-radius: 5px;">
+
+                                <div class="row">
+                                    <div class="col">
+                                        Do you have sleeplessness?
+                                    </div>
+                                    <div class="col ">
+
+
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="sleeplessness"
+                                                id="inlineRadio1" value="Yes">
+                                            <label class="form-check-label" for="inlineRadio1">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="sleeplessness"
+                                                id="inlineRadio1" value="No">
+                                            <label class="form-check-label" for="inlineRadio1">No</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6" style="border-color: #72E48E;">
+
+                        <div class="m-2">
+
+                            <div
+                                style="border-style: solid;background-color: #e9f9e7;border-color: #72E48E;height:35px;border-width: 1px;padding: 7px;border-radius: 5px;">
+
+                                <div class="row">
+                                    <div class="col">
+                                        Do you have hypertension?
+                                    </div>
+                                    <div class="col ">
+
+
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="hypertension"
+                                                id="inlineRadio1" value="Yes">
+                                            <label class="form-check-label" for="inlineRadio1">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="hypertension"
+                                                id="inlineRadio1" value="No">
+                                            <label class="form-check-label" for="inlineRadio1">No</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6" style="border-color: #72E48E;">
+
+                        <div class="m-2">
+
+                            <div
+                                style="border-style: solid;background-color: #e9f9e7;border-color: #72E48E;height:35px;border-width: 1px;padding: 7px;border-radius: 5px;">
+
+                                <div class="row">
+                                    <div class="col">
+                                        Do you have diabetic?
+                                    </div>
+                                    <div class="col ">
+
+
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="diabetic"
+                                                id="inlineRadio1" value="Yes">
+                                            <label class="form-check-label" for="inlineRadio1">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="diabetic"
+                                                id="inlineRadio1" value="No">
+                                            <label class="form-check-label" for="inlineRadio1">No</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6" style="border-color: #72E48E;">
+
+                        <div class="m-2">
+
+                            <div
+                                style="border-style: solid;background-color: #e9f9e7;border-color: #72E48E;height:35px;border-width: 1px;padding: 7px;border-radius: 5px;">
+
+                                <div class="row">
+                                    <div class="col">
+                                        Do you suffer from excessive urination?
+                                    </div>
+                                    <div class="col ">
+
+
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="ex_urination"
+                                                id="inlineRadio1" value="Yes">
+                                            <label class="form-check-label" for="inlineRadio1">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="ex_urination"
+                                                id="inlineRadio1" value="No">
+                                            <label class="form-check-label" for="inlineRadio1">No</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6" style="border-color: #72E48E;">
+
+                        <div class="m-2">
+
+                            <div
+                                style="border-style: solid;background-color: #e9f9e7;border-color: #72E48E;height:35px;border-width: 1px;padding: 7px;border-radius: 5px;">
+
+                                <div class="row">
+                                    <div class="col">
+                                        Do you have nocturnal emission?
+                                    </div>
+                                    <div class="col ">
+
+
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="noc_emission"
+                                                id="inlineRadio1" value="Yes">
+                                            <label class="form-check-label" for="inlineRadio1">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="noc_emission"
+                                                id="inlineRadio1" value="No">
+                                            <label class="form-check-label" for="inlineRadio1">No</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6" style="border-color: #72E48E;">
+
+                        <div class="m-2">
+
+                            <div
+                                style="border-style: solid;background-color: #e9f9e7;border-color: #72E48E;height:35px;border-width: 1px;padding: 7px;border-radius: 5px;">
+
+                                <div class="row">
+                                    <div class="col">
+                                        Do you have premature ejaculation?
+                                    </div>
+                                    <div class="col ">
+
+
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="premature_ejaculation"
+                                                id="inlineRadio1" value="Yes">
+                                            <label class="form-check-label" for="inlineRadio1">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="premature_ejaculation"
+                                                id="inlineRadio1" value="No">
+                                            <label class="form-check-label" for="inlineRadio1">No</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6" style="border-color: #72E48E;">
+
+                        <div class="m-2">
+
+                            <div
+                                style="border-style: solid;background-color: #e9f9e7;border-color: #72E48E;height:35px;border-width: 1px;padding: 7px;border-radius: 5px;">
+
+                                <div class="row">
+                                    <div class="col">
+                                        Do you have sexual weakness?
+                                    </div>
+                                    <div class="col ">
+
+
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="s_weakness"
+                                                id="inlineRadio1" value="Yes">
+                                            <label class="form-check-label" for="inlineRadio1">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="s_weakness"
+                                                id="inlineRadio1" value="No">
+                                            <label class="form-check-label" for="inlineRadio1">No</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6" style="border-color: #72E48E;">
+
+                        <div class="m-2">
+
+                            <div
+                                style="border-style: solid;background-color: #e9f9e7;border-color: #72E48E;height:35px;border-width: 1px;padding: 7px;border-radius: 5px;">
+
+                                <div class="row">
+                                    <div class="col">
+                                        Have you ever suffered from venereal diseases?
+                                    </div>
+                                    <div class="col ">
+
+
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="v_diseases"
+                                                id="inlineRadio1" value="Yes">
+                                            <label class="form-check-label" for="inlineRadio1">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="v_diseases"
+                                                id="inlineRadio1" value="No">
+                                            <label class="form-check-label" for="inlineRadio1">No</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6" style="border-color: #72E48E;">
+
+                        <div class="m-2">
+
+                            <div
+                                style="border-style: solid;background-color: #e9f9e7;border-color: #72E48E;height:35px;border-width: 1px;padding: 7px;border-radius: 5px;">
+
+                                <div class="row">
+                                    <div class="col">
+                                        Are you addicted to any other intoxicant?
+                                    </div>
+                                    <div class="col ">
+
+
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="intoxicant"
+                                                id="inlineRadio1" value="Yes">
+                                            <label class="form-check-label" for="inlineRadio1">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input required class="form-check-input" type="radio" name="intoxicant"
+                                                id="inlineRadio1" value="No">
+                                            <label class="form-check-label" for="inlineRadio1">No</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="form-group m-2">
+                            <textarea class="form-control text-dark" style="background-color: #e9f9e7;border-color: #72E48E;height:35px;"
+                                placeholder="Message" name="message" id="" cols="40" rows="20"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="text-center mt-3">
+                    <button type="submit" class="btn text-light">Send Message</button>
+                </div>
+            </form>
+
+            <div class="clear_fix"></div>
+        </div>
+    </section>       
 
    <!--? faq area end-->
    <!--? About Law Start-->

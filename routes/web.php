@@ -42,6 +42,7 @@ Route::get('/contact',[FrontendController::class,'contact'])->name('contact');
 Route::post('/contact_us',[ContactController::class,'store'])->name('contact_us');
 Route::get('/service',[FrontendController::class,'service'])->name('service');
 Route::get('/service/detail/{id}',[FrontendController::class,'service_detail'])->name('service_detail');
+Route::get('/faq/detail/{id}',[FrontendController::class,'faq_detail'])->name('faq_detail');
 Route::post('/subscribe',[SubscribeUsController::class,'store'])->name('subscribe');
 Route::post('/consulting',[ConsultController::class,'store'])->name('cnst_Store');
 
