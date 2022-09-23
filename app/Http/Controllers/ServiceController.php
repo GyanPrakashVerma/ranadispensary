@@ -14,7 +14,7 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $service=Service::where('delete_status',0)->get();
+        $service=Service::where('delete_status',0)->orderBy('id','asc')->paginate(10);
         return view('backend.Services.index',compact('service'));
     }
 
@@ -43,7 +43,7 @@ class ServiceController extends Controller
         // $service->tags=$request->tag;
         if($request->image!=null){
             $file_photo=time().'.'.request()->image->getClientOriginalExtension();
-            $request->image->move(public_path('images'),$file_photo);
+            $request->image->move(('images'),$file_photo);
             $service->images=$file_photo;
     }
     $service->save();
@@ -87,7 +87,7 @@ class ServiceController extends Controller
         // $service->tags=$request->tag;
         if($request->image!=null){
             $file_photo=time().'.'.request()->image->getClientOriginalExtension();
-            $request->image->move(public_path('images'),$file_photo);
+            $request->image->move(('images'),$file_photo);
             $service->images=$file_photo;
     }
     $service->status=$request->status;

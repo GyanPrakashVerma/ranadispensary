@@ -15,17 +15,19 @@ class FrontendController extends Controller
 {
     public function comming(){
         $banner= Banner :: where('status',1)->first();
+        $service= Service ::where('delete_status', 0) -> where('status',1)->get();
         $about = About::where('delete_status', 0) ->where('status', 1)->first();
         $setting = Setting::where('delete_status', 0) ->where('status', 1)->first();
-        return view('frontend.index',compact('setting','about','banner'));
+        return view('frontend.index',compact('setting','about','banner','service'));
     }
     public function home(){
         // $team=Ourteam::where('delete_status',0)->get();
         // $feedback=Feedback::where('delete_status',0)->get();
         $banner= Banner :: where('status',1)->first();
+        $service= Service ::where('delete_status', 0) -> where('status',1)->get();
         $about = About::where('delete_status', 0) ->where('status', 1)->first();
         $setting = Setting::where('delete_status', 0) ->where('status', 1)->first();
-        return view('frontend.index',compact('setting','about','banner'));
+        return view('frontend.index',compact('setting','about','banner','service'));
     }
     public function about(){
         $banner= Banner :: where('status',1)->first();
@@ -69,10 +71,10 @@ class FrontendController extends Controller
     }
 
     public function service_detail($id){
-        $service =Service ::find($id);
+        $ser =Service ::find($id);
         $banner= Banner :: where('status',1)->first();
         $setting = Setting::where('delete_status', 0) ->where('status', 1)->first();
-        return view('frontend.services',compact('setting','banner','service'));
+        return view('frontend.service_detail',compact('setting','banner','ser'));
     }
 
     public function doctors(){

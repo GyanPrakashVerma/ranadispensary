@@ -109,114 +109,32 @@
         <div class="service-area">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
+                    @foreach($service as $services)
+                    <div class="col-lg-4 col-md-6 col-sm-6" >
                         <div class="single-cat text-center mb-50">
                             <div class="cat-icon">
-                                <img src="{{ asset('frontend/assets/img/icon/services1.svg') }}" alt="">
+                                <img src="{{ asset('images/'.$services->images) }}" style="height:100px;width:100px;" alt="">
                             </div>
                             <div class="cat-cap">
-                                <h5><a href="#">Physical Activity</a></h5>
-                                <p>Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi
-                                    sem ut ipsum.</p>
-                                <a href="#" class="plus-btn"><i class="ti-plus"></i></a>
+                                <h5><a href="{{route('service_detail',$services->id)}}">{{$services->title}}</a></h5>
+                                <p>{{$services->short_description}}</p>
+                                <a href="{{route('service_detail',$services->id)}}" class="plus-btn pb-1" style="text-decoration:underline!important;">Read More..</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-cat text-center mb-50">
-                            <div class="cat-icon">
-                                <img src="{{ asset('frontend/assets/img/icon/services2.svg') }}" alt="">
-                            </div>
-                            <div class="cat-cap">
-                                <h5><a href="#">Physical Activity</a></h5>
-                                <p>Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi
-                                    sem ut ipsum.</p>
-                                <a href="#" class="plus-btn"><i class="ti-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-cat text-center mb-50">
-                            <div class="cat-icon">
-                                <img src="{{ asset('frontend/assets/img/icon/services3.svg') }}" alt="">
-                            </div>
-                            <div class="cat-cap">
-                                <h5><a href="#">Physical Activity</a></h5>
-                                <p>Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi
-                                    sem ut ipsum.</p>
-                                <a href="#" class="plus-btn"><i class="ti-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
         <!-- Services Area End -->
-        <!--? Testimonial Area Start -->
-        {{-- <section class="testimonial-area testimonial-padding fix">
-            <div class="container">
-                <div class="row align-items-center justify-content-center">
-                    <div class=" col-lg-9">
-                        <div class="about-caption">
-                            <!-- Testimonial Start -->
-                            <div class="h1-testimonial-active dot-style">
-                                <!-- Single Testimonial -->
-                                <div class="single-testimonial position-relative">
-                                    <div class="testimonial-caption">
-                                        <img src="{{ asset('frontend/assets/img/icon/quotes-sign.png') }}" alt=""
-                                            class="quotes-sign">
-                                        <p>"The automated process starts as soon as your clothe go into the machine. This
-                                            site outcome is gleaming clothe. Placeholder text commonly used. In publishing
-                                            and graphic.</p>
-                                    </div>
-                                    <!-- founder -->
-                                    <div class="testimonial-founder d-flex align-items-center">
-                                        <div class="founder-img">
-                                            <img src="{{ asset('frontend/assets/img/icon/testimonial.png') }}"
-                                                alt="">
-                                        </div>
-                                        <div class="founder-text">
-                                            <span>Robart Brown</span>
-                                            <p>Creative designer at Colorlib</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Single Testimonial -->
-                                <div class="single-testimonial position-relative">
-                                    <div class="testimonial-caption">
-                                        <img src="{{ asset('frontend/assets/img/icon/quotes-sign.png') }}" alt=""
-                                            class="quotes-sign">
-                                        <p>"The automated process starts as soon as your clothe go into the machine. This
-                                            site outcome is gleaming clothe. Placeholder text commonly used. In publishing
-                                            and graphic.</p>
-                                    </div>
-                                    <!-- founder -->
-                                    <div class="testimonial-founder d-flex align-items-center">
-                                        <div class="founder-img">
-                                            <img src="{{ asset('frontend/assets/img/icon/testimonial.png') }}"
-                                                alt="">
-                                        </div>
-                                        <div class="founder-text">
-                                            <span>Robart Brown</span>
-                                            <p>Creative designer at Colorlib</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Testimonial End -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> --}}
-        <!--? Testimonial Area End -->
+      
         <!--? video_start -->
         <div class="container">
             <div class="video-area section-bg2 d-flex align-items-center"
                 data-background="{{ asset('frontend/assets/img/gallery/video-bg.png') }}">
                 <div class="video-wrap position-relative">
                     <div class="video-icon">
-                        <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=up68UAfH0d0"><i
+                        <a class="popup-video btn-icon" href="https://youtu.be/f2EdQufdciA"><i
                                 class="fas fa-play"></i></a>
                     </div>
                 </div>
