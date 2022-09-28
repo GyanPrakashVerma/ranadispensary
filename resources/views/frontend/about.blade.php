@@ -13,7 +13,7 @@
                              <div class="hero-wrapper">
                                 <div class="hero__caption">
                                     <h1 data-animation="fadeInUp" data-delay=".3s">About</h1>
-                                    <p data-animation="fadeInUp" data-delay=".6s">Almost before we knew it, we<br> had left the ground</p>
+                                    {{-- <p data-animation="fadeInUp" data-delay=".6s">Almost before we knew it, we<br> had left the ground</p> --}}
                                 </div>
                             </div>
                         </div>
@@ -658,7 +658,7 @@
                         <div class="section-tittle mb-35">
                             <h2>100% satisfaction guaranteed.</h2>
                         </div>
-                        <p>Almost before we knew it, we had left the ground</p>
+                        {{-- <p>Almost before we knew it, we had left the ground</p> --}}
                         <a href="{{route('contact')}}" class="border-btn">Make an Appointment</a>
                     </div>
                 </div>

@@ -20,8 +20,8 @@
                                     <div class="hero__caption">
                                         <h1 data-animation="fadeInUp" data-delay=".3s">Health is wealth keep it healthy
                                         </h1>
-                                        <p data-animation="fadeInUp" data-delay=".6s">Almost before we knew it, we<br> had
-                                            left the ground</p>
+                                        {{-- <p data-animation="fadeInUp" data-delay=".6s">Almost before we knew it, we<br> had
+                                            left the ground</p> --}}
                                         <a href="#" class="btn" data-animation="fadeInLeft"
                                             data-delay=".3s">Take a Service</a>
                                     </div>
@@ -95,7 +95,7 @@
                         <div class="col-xl-7 col-lg-9 col-md-8">
                             <div class="wantToWork-caption wantToWork-caption2">
                                 <h2>Happy mind <br>healthy life</h2>
-                                <p>Almost before we knew it, we<br> had left the ground</p>
+                                {{-- <p>Almost before we knew it, we<br> had left the ground</p> --}}
                             </div>
                         </div>
                         <div class="col-xl-2 col-lg-3 col-md-4">
@@ -727,7 +727,7 @@
                                 <div class="section-tittle mb-35">
                                     <h2>100% satisfaction guaranteed.</h2>
                                 </div>
-                                <p>Almost before we knew it, we had left the ground</p>
+                                {{-- <p>Almost before we knew it, we had left the ground</p> --}}
                                 <a href="{{route('contact')}}" class="border-btn">Make an Appointment</a>
                             </div>
                         </div>

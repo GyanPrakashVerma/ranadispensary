@@ -1,8 +1,12 @@
 @include('frontend.layouts.header')
 <section id="transliterateTextarea" class="content">
+  <style>
+    /* #google_translate_element{
+      float:right;
+    } */
+  </style>
   {{-- <div >
     <button class="btn btn-primary" id="google_translate_element"> --}}
-      <div   id="google_translate_element"></div>
   
   
   {{-- <div class="container-fluid"> --}}

@@ -2506,11 +2506,18 @@ hr {
     }
 }
 
+@media(max-width:768px){
+    .lang{
+        display: none !important;
+    }
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .header-area .main-header {
         padding: 19px 24px
     }
 }
+
+
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .header-area .main-header {
@@ -2518,6 +2525,11 @@ hr {
     }
 }
 
+@media (max-width: 575px) {
+    .header-area .main-header {
+        padding: 19px 0px
+    }
+}
 @media (max-width: 575px) {
     .header-area .main-header {
         padding: 19px 0px
@@ -2671,7 +2683,7 @@ hr {
 }
 
 .mobile_menu .slicknav_menu .slicknav_btn {
-    top: -60px
+    top: -100px;
 }
 
 .mobile_menu .slicknav_menu .slicknav_btn .slicknav_icon-bar {
@@ -2876,6 +2888,16 @@ hr {
     left      : 7%
 }
 
+@media only screen and (min-width: 992px) and (max-width: 1600px){
+    .ab{
+        display: block!important;
+    }
+}
+@media only screen and (min-width: 557px) and (max-width: 768px){
+    .ab{
+        display: none;
+    }
+}
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
     .slider-area .dot-style .slick-dots {
         left: 3%
@@ -6789,7 +6811,24 @@ del {
 .goog-te-gadget {
     color: transparent !important;
 }
+.goog-te-combo{
+    background:#dcf6da ;
+    padding   : 10px!important;
+    color:#234821;
+    font-size: 16px!important;
+    font-weight:700!important;
+    border-radius: 0 2px 2px 20px;
+    /* visibility: hidden !important; */
+    -webkit-border-radius: 0 2px 2px 20px;
+    -moz-border-radius: 0 2px 2px 20px;
+    -ms-border-radius: 0 2px 2px 20px;
+    -o-border-radius: 0 2px 2px 20px;
+}
+.goog-te-combo:hover{
+    background: #234821;
+    color:#fff;
 
+}
 .goog-te-banner-frame.skiptranslate {
     display: none !important;
 }
