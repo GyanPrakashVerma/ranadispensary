@@ -40,7 +40,11 @@
     })();
     </script>
     <!--End of Tawk.to Script-->
+
+    <script type="text/javascript" src="https://www.google.com/jsapi">
+    </script>
 </head>
+
 <style>
     p{
         hyphens: auto;

@@ -1,8 +1,12 @@
 @include('frontend.layouts.header')
-<section class="content">
-    
-    {{-- <div class="container-fluid"> --}}
-      @yield('add_content')
+<section id="transliterateTextarea" class="content">
+  {{-- <div >
+    <button class="btn btn-primary" id="google_translate_element"> --}}
+      <div   id="google_translate_element"></div>
+  
+  
+  {{-- <div class="container-fluid"> --}}
+    @yield('add_content')
     {{-- </div> --}}
-</section>
+  </section>
 @include('frontend.layouts.footer')

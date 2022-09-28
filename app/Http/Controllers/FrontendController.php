@@ -61,7 +61,6 @@ class FrontendController extends Controller
 
     public function contact(){
         $banner= Banner :: where('status',1)->first();
-        // $feedback=Feedback::where('delete_status',0)->get();
         $setting = Setting::where('delete_status', 0) ->where('status', 1)->first();
         return view('frontend.contact',compact('setting','banner'));
     }
@@ -69,17 +68,11 @@ class FrontendController extends Controller
 
     public function gallery(){
         $banner= Banner :: where('status',1)->first();
-        // $feedback=Feedback::where('delete_status',0)->get();
         $image= Gallery::where('delete_status',0)->get();
         $setting = Setting::where('delete_status', 0) ->where('status', 1)->first();
         return view('frontend.gallery',compact('setting','image','banner'));
     }
     
-  
-   
-
-   
-
     public function faq(){
         $banner= Banner :: where('status',1)->first();
         $faq= Faq :: where('delete_status',0)->get();
