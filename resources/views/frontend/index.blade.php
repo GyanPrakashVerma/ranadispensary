@@ -2,7 +2,7 @@
 @section('add_content')
     <main>
         <!--? Slider Area Start-->
-        <div class="slider-area" style="background:url('{{asset('Banner/'.$banner->banner)}}');background-repeat:no-repeat">
+        <div class="slider-area" style="background:url('{{asset('Banner/'.$banner->banner)}}');background-repeat:no-repeat;width:100%;">
             <div class="slider-active dot-style">
                 <!-- Slider Single -->
                 <div class="single-slider d-flex align-items-center slider-height">

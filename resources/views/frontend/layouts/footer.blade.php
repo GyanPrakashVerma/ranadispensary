@@ -1,12 +1,21 @@
 <footer>
+    <style>
+        .footer-tittle h4::after{
+            content: "";
+            border-bottom:2px solid #234821;
+            width: 70%;
+            padding: 5px;
+            display: flex;
+        }
+    </style>
     <div class="footer-wrappr section-bg3" data-background="{{ asset('frontend/assets/img/gallery/footer-bg.png') }}">
         <div class="footer-area footer-padding ">
             <div class="container">
-                <div class="row justify-content-between text-center">
+                <div class="row">
                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                         <div class="single-footer-caption mb-50">
                             <!-- logo -->
-                            <div class="footer-logo mb-25">
+                            <div class="footer-logo mb-25 text-left">
                                 <a href="{{ route('home') }}"><img src="{{ asset('setting_img/' . $setting->logo) }}"
                                         style="height:90px;width:250px" alt=""></a>
                             </div>
@@ -43,7 +52,7 @@
                         </div>
                         <d iv class="header-area">
                             <div class="main-header main-header2">
-                                <div class="menu-main  align-items-center">
+                                <div class="menu-main">
                                     <!-- Main-menu -->
                                     <div class="main-menu main-menu2">
                                         <nav>

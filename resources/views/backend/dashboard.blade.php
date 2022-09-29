@@ -4,7 +4,7 @@
 @php
 //  $blog = \App\Models\Blog::where('delete_status',0)->count();   
  $service = \App\Models\Service::where('delete_status',0)->count();   
- $feedback = \App\Models\Feedback::where('delete_status',0)->count();   
+ $consult = \App\Models\Consult::where('delete_status',0)->count();   
  $gallery = \App\Models\Gallery::where('delete_status',0)->count();   
  $enquiry = \App\Models\Enquiry::where('delete_status',0)->count();   
 @endphp
@@ -33,11 +33,11 @@
                </div>
                <div class="col-lg-3 col-md-6">
                   <div class="card dashboard-product">
-                     <span>Feedbacks</span>
-                     <h2 class="dashboard-total-products">{{$feedback}}</h2>
-                     <span class="label label-primary">Feedbacks</span>Today feedback
+                     <span>Consults</span>
+                     <h2 class="dashboard-total-products">{{$consult}}</h2>
+                     <span class="label label-primary">Consults</span>Today consult
                      <div class="side-box ">
-                        <i class="ti-gift text-primary-color"></i>
+                        <i class="fa-solid fa-stethoscope"></i>
                      </div>
                   </div>
                </div>
@@ -61,8 +61,6 @@
                      </div>
                   </div>
                </div>
-              
-              
             </div>
             
             

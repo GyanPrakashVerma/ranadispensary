@@ -50,9 +50,9 @@
             <li {{ Request::is('admin/subscribe') ? 'active' : '' }}><a class="waves-effect waves-dark"
                     href="{{ route('subscribe.index') }}"><i class="fa-solid fa-user-check"></i><span>
                         Subscribe</span></a></li>
-            <li {{ Request::is('/admin/feedback') ? 'active' : '' }}><a class="waves-effect waves-dark"
+            {{-- <li {{ Request::is('/admin/feedback') ? 'active' : '' }}><a class="waves-effect waves-dark"
                     href="{{ route('feedback.index') }}"><i class="fa-solid fa-message"></i><span>
-                        Feedbacks</span></a></li>
+                        Feedbacks</span></a></li> --}}
             <li {{ Request::is('admin/service') ? 'active' : '' }}><a class="waves-effect waves-dark"
                     href="{{ route('service.index') }}"><i class="fa-brands fa-servicestack"></i><span>
                         Services</span></a></li>
