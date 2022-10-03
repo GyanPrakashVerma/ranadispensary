@@ -19,6 +19,9 @@ use App\Http\Controllers\SliderController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ConsultController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\AyurvedaController;
+use App\Http\Controllers\UnaniController;
+use App\Http\Controllers\AppointmentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,7 +37,8 @@ use App\Http\Controllers\FaqController;
 Route::get('/',[FrontendController::class,'comming']);
 Route::get('/home',[FrontendController::class,'home'])->name('home');
 // Route::get('/blogs',[FrontendController::class,'blogs'])->name('blogs');
-Route::get('/gallery',[FrontendController::class,'gallery'])->name('gallery');
+Route::get('/Unani',[FrontendController::class,'unani'])->name('unani');
+Route::get('/ayurveda',[FrontendController::class,'ayurveda'])->name('ayurveda');
 Route::get('/about',[FrontendController::class,'about'])->name('about');
 Route::get('/faq',[FrontendController::class,'faq'])->name('faq');
 Route::get('/doctors',[FrontendController::class,'doctors'])->name('doctors');
@@ -45,6 +49,7 @@ Route::get('/service/detail/{id}',[FrontendController::class,'service_detail'])-
 Route::get('/faq/detail/{id}',[FrontendController::class,'faq_detail'])->name('faq_detail');
 Route::post('/subscribe',[SubscribeUsController::class,'store'])->name('subscribe');
 Route::post('/consulting',[ConsultController::class,'store'])->name('cnst_Store');
+Route::post('/appointment',[AppointmentController::class,'store'])->name('appointment');
 
 
 
@@ -68,6 +73,8 @@ Route::group(['middleware' => ['adminpage'], 'prefix' =>'/admin'],function(){
     Route::resource('setting',SettingController::class);
     Route::resource('about',AboutController::class);
     Route::resource('faq',FaqController::class);
+    Route::resource('unani',UnaniController::class);
+    Route::resource('ayurveda',AyurvedaController::class);
     Route::get('/consulting/list',[ConsultController::class,'index'])->name('cnst_list');
     Route::get('/consulting/list/show/{id}',[ConsultController::class,'show'])->name('cnst_show');
     Route::get('/consulting/list/delete/{id}',[ConsultController::class,'delete'])->name('cnst_delete');

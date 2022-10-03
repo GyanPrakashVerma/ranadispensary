@@ -30,8 +30,8 @@
                         class="fa-solid fa-camera"></i><span>
                         Hero section</span><i class="icon-arrow-down"></i></a>
                 <ul class="treeview-menu">
-                    <li {{ Request::is('admin/ourteam') ? 'active' : '' }}><a class="waves-effect waves-dark"
-                            href="{{ route('slider.index') }}"> <i class="icon-arrow-right"></i>Slider section</a></li>
+                    {{-- <li {{ Request::is('admin/ourteam') ? 'active' : '' }}><a class="waves-effect waves-dark"
+                            href="{{ route('slider.index') }}"> <i class="icon-arrow-right"></i>Slider section</a></li> --}}
 
                     <li {{ Request::is('admin/banner/1/edit') ? 'active' : '' }}><a class="waves-effect waves-dark"
                             href="{{'/admin/banner/1/edit'}}"><i class="icon-arrow-right"></i> Banner</a></li>
@@ -41,8 +41,8 @@
             <li {{ Request::is('admin/ourteam') ? 'active' : '' }}><a class="waves-effect waves-dark"
                     href="{{ route('ourteam.index') }}"><i class="fa-solid fa-people-group"></i><span>
                         Our Team</span></a></li>
-                        <li {{ Request::is('/admin/about/1/edit') ? 'active' : '' }}><a class="waves-effect waves-dark"
-                            href="{{ '/admin/about/1/edit'}}"><i class="fa-solid fa-people-group"></i><span>
+            <li {{ Request::is('/admin/about/1/edit') ? 'active' : '' }}><a class="waves-effect waves-dark"
+                            href="{{ '/admin/about/1/edit'}}"><i class="fa-solid fa-user-nurse"></i><span>
                                 About Us</span></a></li>
             <li {{ Request::is('admin/enquiries') ? 'active' : '' }}><a class="waves-effect waves-dark"
                     href="{{ route('enquiries.index') }}"><i class="fa-solid fa-calendar-check"></i><span>
@@ -59,9 +59,12 @@
             {{-- <li  {{Request::is('admin/ourteam')? 'active' : "";}}><a class="waves-effect waves-dark" href="{{ route('blog.list') }}"><i
                         class="fa-solid fa-blog"></i><span>
                         Blog</span></a></li> --}}
-            <li {{ Request::is('admin/gallery') ? 'active' : '' }}><a class="waves-effect waves-dark"
-                    href="{{ route('gallery.index') }}"><i class="fa-solid fa-camera"></i><span>
-                        Gallery</span></a></li>
+            <li {{ Request::is('/admin/unani/1/edit') ? 'active' : '' }}><a class="waves-effect waves-dark"
+                    href="{{ '/admin/unani/1/edit' }}"><i class="fa-solid fa-comment-medical"></i><span>
+                        Unani</span></a></li>
+            <li {{ Request::is('/admin/ayurveda/1/edit') ? 'active' : '' }}><a class="waves-effect waves-dark"
+                            href="{{ '/admin/ayurveda/1/edit' }}"><i class="fa-solid fa-mortar-pestle"></i><span>
+                                Ayurveda</span></a></li>
             <li {{ Request::is('admin/consulting/list') ? 'active' : '' }}><a class="waves-effect waves-dark" href="{{route('cnst_list')}}"><i class="fa-solid fa-stethoscope"></i><span>
                         Consultant</span></a></li>
             <li {{ Request::is('admin/setting/1/edit') ? 'active' : '' }}><a class="waves-effect waves-dark"

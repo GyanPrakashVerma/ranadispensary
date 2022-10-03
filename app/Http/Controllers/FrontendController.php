@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 use App\Models\Ourteam;
 use App\Models\Service;
-use App\Models\Gallery;
+use App\Models\Ayurveda;
+use App\Models\Unani;
 use App\Models\Setting;
 use App\Models\Faq;
 use App\Models\About;
@@ -66,11 +67,17 @@ class FrontendController extends Controller
     }
    
 
-    public function gallery(){
+    public function unani(){
         $banner= Banner :: where('status',1)->first();
-        $image= Gallery::where('delete_status',0)->get();
+        $unani= Unani::where('delete_status',0)->first();
         $setting = Setting::where('delete_status', 0) ->where('status', 1)->first();
-        return view('frontend.gallery',compact('setting','image','banner'));
+        return view('frontend.unani',compact('setting','unani','banner'));
+    }
+    public function ayurveda(){
+        $banner= Banner :: where('status',1)->first();
+        $ayurveda= Ayurveda::where('delete_status',0)->first();
+        $setting = Setting::where('delete_status', 0) ->where('status', 1)->first();
+        return view('frontend.ayurveda',compact('setting','ayurveda','banner'));
     }
     
     public function faq(){
