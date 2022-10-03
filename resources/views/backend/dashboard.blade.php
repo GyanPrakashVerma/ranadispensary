@@ -79,6 +79,7 @@
                                       <th>Age</th>
                                       <th>Mobile</th>
                                       <th>Email</th>
+                                      <th>Message</th>
                                   </tr>
                               </thead>
                               <tbody>
@@ -92,6 +93,7 @@
                                           <td>{{ $apps->age }}</td>
                                           <td>{{ $apps->mobile }}</td>
                                           <td>{{ $apps->email }}</td>
+                                          <td>{{ $apps->message }}</td>
                                     
                                           {{-- <td>
                                               <form action="{{ route('gallery.destroy', $apps->id) }}" method="POST">
